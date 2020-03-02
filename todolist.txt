@@ -1,0 +1,8 @@
+Dependências do projeto
+- redux
+- redux-persist
+- redux-logger
+- eslint
+- prettier
+- axios
+- react-router
