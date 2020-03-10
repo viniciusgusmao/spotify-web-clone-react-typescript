@@ -6,4 +6,4 @@ Dependências do projeto
 - prettier - ok
 - editorconfig - ok
 - axios
-- react-router
+- react-router - ok

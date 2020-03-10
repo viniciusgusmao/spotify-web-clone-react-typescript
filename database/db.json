@@ -1,0 +1,418 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Laptops & Acessories",
+      "description": "Dell. HP, Macbook, Alienware and etc."
+    },
+    {
+      "id": 2,
+      "name": "Electronics",
+      "description": "Blender , iron, Vacuum cleaner ..."
+    },
+    {
+      "id": 3,
+      "name": "Audio & Sound Devices",
+      "description": "Speaker, Headphone, Soundcard ..."
+    },
+    {
+      "id": 4,
+      "name": "Smartphone & Tablets",
+      "description": "Iphone, OPPO, SamSung, SONY ..."
+    },
+    {
+      "id": 5,
+      "name": "Gaming Gear",
+      "description": "Mouse, Headphone, Console ..."
+    },
+    {
+      "id": 6,
+      "name": "Smart Watches",
+      "description": "Lorem ipsum dolor sit amet quam"
+    },
+    {
+      "id": 7,
+      "name": "Camera",
+      "description": "Lorem ipsum dolor sit amet quam"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Asus Repulic of Gamers",
+      "price": 147,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 1,
+      "rate": 2.44,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/12-1.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/image-sound-1.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/desktop-2.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "HP Pavilion Gaming",
+      "price": 217,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 1,
+      "rate": 5.44,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/29.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/desktop-2.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Lenovo Ideapad 14",
+      "price": 306,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 1,
+      "rate": 8,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/30.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/29.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Professional Audio Equipment",
+      "price": 268,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 1,
+      "rate": 6.55,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/4.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/7.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/13.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "American fridge freezer",
+      "price": 309,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 2,
+      "rate": 8.21,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/27.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/24.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/26.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Modern microwave",
+      "price": 95,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 2,
+      "rate": 9,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/25.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/24.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/26.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Modern microwave",
+      "price": 321,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 2,
+      "rate": 9,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/27_green.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/27.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Profesional rice cooker",
+      "price": 174,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 2,
+      "rate": 9,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/24.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/27_green.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Audio Equipment",
+      "price": 485,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 3,
+      "rate": 7.56,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/7.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/4.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/14.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Beats Solo3 Wireless",
+      "price": 182,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 3,
+      "rate": 5.56,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/23.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/13.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/4_black.jpg"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Professional Audio Equipment",
+      "price": 499,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 3,
+      "rate": 9,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/20.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/5.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/4_black.jpg"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Professional Audio Fixed Info",
+      "price": 213,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 3,
+      "rate": 5,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/4.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/7.jpg"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Sennheiser HD2 lightweight",
+      "price": 393,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 3,
+      "rate": 6.5,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/23.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/5.jpg"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Black Iphone X Max",
+      "price": 495,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 4,
+      "rate": 9.4,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/9.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/15.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/3.jpg"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Honor 10 Price in India",
+      "price": 323,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 4,
+      "rate": 6.4,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/16.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/3.jpg"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Honor 10 Price in India",
+      "price": 450,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 4,
+      "rate": 6.4,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/9.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/10.jpg"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Samsung Glaxy S9",
+      "price": 356,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 4,
+      "rate": 6.4,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/2.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/10.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/15.jpg"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Roland Pro Gold",
+      "price": 381,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 5,
+      "rate": 9,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/22.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/28.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/desktop-2.jpg"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Sound Headphone",
+      "price": 129,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 5,
+      "rate": 5.4,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/28.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/6-1.jpg"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Xmen Mouse Black",
+      "price": 85,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 5,
+      "rate": 9.4,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/desktop-2.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/22.jpg"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Sound Headphone 3",
+      "price": 156,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 5,
+      "rate": 9.4,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/183598-razer-manowar-overwatch-headset-1.png",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/28.jpg"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Cheap Smart watch",
+      "price": 493,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 6,
+      "rate": 5.9,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/32.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/31.jpg"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Hype Smart watch",
+      "price": 497,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 6,
+      "rate": 7.9,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/34.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/31.jpg"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Hype Smart watch External",
+      "price": 145,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 6,
+      "rate": 9.5,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/1.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/33.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/32.jpg"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Smart watch for kids",
+      "price": 60,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 6,
+      "rate": 2.5,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/33.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/34.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/32.jpg"
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Canon DSLR camera",
+      "price": 403,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 7,
+      "rate": 7.5,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/camera-3.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/5.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/21.jpg"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Flycam Phantom 3SE",
+      "price": 145,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 7,
+      "rate": 9.5,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/5.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/image-camera-2.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/5.jpg"
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Surveillance camera",
+      "price": 493,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 7,
+      "rate": 9.5,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/image-camera-2.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/21.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/5.jpg"
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Security camera",
+      "price": 279,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 7,
+      "rate": 6.5,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/camera-3.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/image-camera-2.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/camera-3.jpg"
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Surveillance camera",
+      "price": 223,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Helen Do consect adipiscing elit annabell",
+      "categoryId": 7,
+      "rate": 9.5,
+      "images": [
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/8.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/13.jpg",
+        "http://gtech.7uptheme.com/wp-content/uploads/2019/01/camera-3.jpg"
+      ]
+    }
+  ]
+}
