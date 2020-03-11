@@ -1,11 +1,21 @@
-import React from 'react';
+import * as React from 'react';
+import { theme } from './theme';
+import { ThemeProvider, createGlobalStyle } from './styled-components';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Teste</h1>
-    </div>
-  );
+const GlobalStyle = createGlobalStyle`
+  body {
+    padding: 0px;
+    margin: 0px;
+  }
+`;
+
+export default function App() {
+    return (
+      <ThemeProvider theme={theme}>
+        <>
+          <GlobalStyle />
+          <h1>Testando</h1>
+        </>
+      </ThemeProvider>
+    );
 }
-
-export default App;
