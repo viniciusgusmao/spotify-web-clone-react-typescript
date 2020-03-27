@@ -1,9 +1,0 @@
-Dependências do projeto
-- redux - ok
-- redux-persist - ok
-- redux-logger - ok
-- eslint - ok
-- prettier - ok
-- editorconfig - ok
-- axios
-- react-router - ok
