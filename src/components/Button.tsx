@@ -42,12 +42,12 @@ const ButtonComp = styled.button<IPropsButtonComp>`
   text-align: center;
   background-color: ${(props) => props.backgroundColor};
   color: ${(props) => props.color};
-  transition: height 0.1s, padding 0.1s, font-size 0.1s;
 
   &:hover{
-    height: 50px;
-    padding: 0px 60px;
-    font-size: 15px;
+    height: 44px;
+    padding: 0px 52px;
+    font-size: 14.5px;
+
   }
 
 `;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Layout } from 'antd';
 import Footer from 'components/Footer';
+import Menu from 'components/Menu';
 
 const {
   Header,
@@ -10,16 +11,18 @@ const {
 
 export default function Home() {
   return (
-    <>
+    <Layout style={{ height: window.innerHeight, minHeight: 350, overflow: 'hidden', margin: 0, padding: 0 }}>
       <Layout>
-        <Sider style={{ backgroundColor: '#040404' }}>Sider</Sider>
+        <Sider style={{ backgroundColor: '#040404' }} width={230} >
+          <Menu />
+        </Sider>
         <Layout>
           <Header style={{ backgroundColor: '#0B0B0B' }}>Header</Header>
           <Content style={{ backgroundColor: '#121212' }}>Content</Content>
         </Layout>
       </Layout>
       <Footer />
-    </>
+    </Layout>
   );
 }
 
