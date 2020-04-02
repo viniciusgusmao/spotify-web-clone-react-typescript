@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0px;
     margin: 0px;
     background-color: white;
+    font-family: 'Circular';
   }
 `;
 

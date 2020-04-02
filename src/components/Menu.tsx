@@ -1,25 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from 'assets/imgs/logo.png';
-import { MdHome MdSearch, MdLibraryAdd } from 'react-icons/md';
+import homeIcon from 'assets/icons/home.png';
+import homeIconFill from 'assets/icons/home_fill.png';
+import searchIcon from 'assets/icons/search.png';
+import searchIconFill from 'assets/icons/search_fill.png';
+import libraryIcon from 'assets/icons/library.png';
 
 export default function Menu() {
   return (
     <BoxMenu>
       <div className="boxMenuContent">
-        <img src={logo} alt="Logo Spotify" />
-        <div>
+        <img src={logo} className="logo" alt="Logo Spotify" />
+        <div className="menu">
           <a className="active" href="#">
-            <MdHome size={24} color="white" />
-            Início
+            <img src={homeIconFill} width="20" height="20" />
+            <span>Início</span>
           </a>
           <a href="#">
-            <MdSearch size={24} color="white" />
-            Buscar
+            <img src={searchIcon} />
+            <span>Buscar</span>
           </a>
           <a href="#">
-            <MdLibraryAdd size={24} color="white" />
-            Sua Biblioteca
+            <img src={libraryIcon} />
+            <span>Sua Biblioteca</span>
           </a>
         </div>
       </div>
@@ -56,7 +60,7 @@ const BoxMenu = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    img{
+    img.logo{
       width: 58%;
       margin-top: 20px;
       margin-left: 20px;
@@ -77,7 +81,7 @@ const BoxMenu = styled.div`
         &:hover{
           color: #FFFFFF;
         }
-        svg{
+        img{
           margin-left: 12px;
           margin-right: 15px;
         }

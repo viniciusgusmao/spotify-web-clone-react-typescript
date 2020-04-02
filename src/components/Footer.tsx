@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout } from 'antd';
 import styled from 'styled-components';
-import Button from 'components/Button';
+import SaiFora from 'components/Button';
 
 const { Footer: Ftr } = Layout;
 
@@ -16,7 +16,7 @@ export default function Footer() {
             <span className="subtitle">Inscreva-se para curtir música ilimitada e podcasts só com alguns anúncios. Não precisa de cartão de crédito. </span>
           </div>
         </div>
-        <Button color="#498DD7" backgroundColor="#fff" title="Inscreva-se grátis" />
+        <SaiFora color="#498DD7" backgroundColor="#fff" title="Inscreva-se grátis" />
       </BoxFooter>
     </Ftr>
   );
@@ -41,14 +41,11 @@ const BoxFooter = styled.div`
       height: 100%;
       justify-content: center;
       span.title{
-        font-weight: bold;
         font-size: 12px;
         letter-spacing: 1.76px;
       }
       span.subtitle{
-        font-weight: bold;
         font-size: 15px;
-        letter-spacing: 0.5px;
       }
     }
   }
