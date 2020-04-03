@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Button from 'components/Button';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
-export default function HeaderPage() {
+export default function Header() {
   return (
     <BoxHeaderPage>
       <div>

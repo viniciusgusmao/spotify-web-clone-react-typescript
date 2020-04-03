@@ -7,24 +7,28 @@ import searchIcon from 'assets/icons/search.png';
 import searchIconFill from 'assets/icons/search_fill.png';
 import libraryIcon from 'assets/icons/library.png';
 
+import {
+  Link
+} from "react-router-dom";
+
 export default function Menu() {
   return (
     <BoxMenu>
       <div className="boxMenuContent">
         <img src={logo} className="logo" alt="Logo Spotify" />
         <div className="menu">
-          <a className="active" href="#">
+          <Link className="active" to="/">
             <img src={homeIconFill} width="20" height="20" />
             <span>Início</span>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="/search">
             <img src={searchIcon} />
             <span>Buscar</span>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="/collection">
             <img src={libraryIcon} />
             <span>Sua Biblioteca</span>
-          </a>
+          </Link>
         </div>
       </div>
       <div className="boxMenuRodape">
