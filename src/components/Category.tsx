@@ -1,14 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Artist from 'components/Artist';
+import Playlist from 'components/Playlist';
 
 type CategoryProps = {
+  id: number,
   title: string,
-  description: string
+  description: string,
+  playlists: {
+    id: number,
+    name: string,
+    description: string,
+    image: string
+  }[]
 }
 
-const Category: React.FC<CategoryProps> = ({ title, description }) => (
+interface IPlaylist {
+  id: number,
+  name: string,
+  description: string,
+  image: string
+}
+
+const Category: React.FC<CategoryProps> = ({ id, title, description, playlists }) => (
   <Container>
     <div>
       <a>{title}</a>
@@ -16,9 +30,9 @@ const Category: React.FC<CategoryProps> = ({ title, description }) => (
     </div>
     <p>{description}</p>
     <div>
-      <Artist image="teste" title="Concentração perfeita" description="Concentração no máximo, sem distrações." />
-      <Artist image="teste" title="Concentração perfeita" description="Concentração no máximo, sem distrações." />
-      <Artist image="teste" title="Concentração perfeita" description="Concentração no máximo, sem distrações." />
+      {playlists?.map((playlist:IPlaylist) => (
+        <Playlist image={playlist.image} name={playlist.name} description={playlist.description} />
+      ))}
     </div>
   </Container>
 );
@@ -29,10 +43,14 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+  margin-bottom: 20px;
   div:last-child{
     div {
       float: left;
       margin-right: 15px;
+    }
+    &:last-child{
+      margin-right: 0;
     }
   }
   div:first-child{
