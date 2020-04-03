@@ -18,8 +18,8 @@ export default function Home() {
         <Sider style={{ backgroundColor: '#040404' }} width={230}>
           <Menu />
         </Sider>
-        <Layout>
-          <Content style={{ backgroundColor: '#121212' }}>
+        <Layout style={{ backgroundColor: '#121212' }}>
+          <Content>
             <HeaderPage />
             <ContentPage />
           </Content>
