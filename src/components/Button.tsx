@@ -1,23 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const defaultProps = {
-  backgroundColor: 'white',
-  color: 'black',
-};
-
 type ButtonProps = {
   title: string,
   color?: string,
   backgroundColor?: string;
-} & typeof defaultProps;
+  fontSize ?: number;
+}
 
 // eslint-disable-next-line react/prop-types
-const Button : React.FC<ButtonProps> = ({ color, backgroundColor, title }) => (
+const Button : React.FC<ButtonProps> = ({ color = 'black', backgroundColor = 'white', title, fontSize = 14 }) => (
   <ButtonComp
     color={color}
     backgroundColor={backgroundColor}
-    type="button"
+    fontSize={fontSize}
   >
     {title}
   </ButtonComp>
@@ -27,29 +23,27 @@ const Button : React.FC<ButtonProps> = ({ color, backgroundColor, title }) => (
 interface IPropsButtonComp {
   color: string,
   backgroundColor: string,
+  fontSize : number,
 }
 
 const ButtonComp = styled.button<IPropsButtonComp>`
-  font-size: 14px;
+  font-size: ${(props) => `${props.fontSize}px`};
   font-weight: 700;
-  letter-spacing: 1.76px;
+  letter-spacing: 1.85px;
   text-transform: uppercase;
   border: 2px solid transparent;
   border-radius: 500px;
-  padding: 0px 50px;
-  height: 42px;
+  padding: 8px 45px;
+  height: 38px;
+  display: flex;
   cursor: pointer;
   text-align: center;
   background-color: ${(props) => props.backgroundColor};
   color: ${(props) => props.color};
-  transition: height 0.1s, padding 0.1s, font-size 0.1s;
-
+  transition: transform .1s;
   &:hover{
-    height: 50px;
-    padding: 0px 60px;
-    font-size: 15px;
+    transform: scale(1.1)
   }
-
 `;
 
 export default Button;
