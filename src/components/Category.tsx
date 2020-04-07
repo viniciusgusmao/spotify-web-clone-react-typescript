@@ -4,22 +4,22 @@ import styled from 'styled-components';
 import Playlist from 'components/Playlist';
 
 type CategoryProps = {
-  id: number,
-  title: string,
-  description: string,
+  id: number;
+  title: string;
+  description: string;
   playlists: {
-    id: number,
-    name: string,
-    description: string,
-    image: string
-  }[]
-}
+    id: number;
+    name: string;
+    description: string;
+    image: string;
+  }[];
+};
 
 interface IPlaylist {
-  id: number,
-  name: string,
-  description: string,
-  image: string
+  id: number;
+  name: string;
+  description: string;
+  image: string;
 }
 
 const Category: React.FC<CategoryProps> = ({ id, title, description, playlists }) => (
@@ -30,7 +30,7 @@ const Category: React.FC<CategoryProps> = ({ id, title, description, playlists }
     </div>
     <p>{description}</p>
     <div>
-      {playlists?.map((playlist:IPlaylist) => (
+      {playlists?.map((playlist: IPlaylist) => (
         <Playlist image={playlist.image} name={playlist.name} description={playlist.description} />
       ))}
     </div>
@@ -44,38 +44,39 @@ const Container = styled.div`
   flex-direction: column;
   flex: 1;
   margin-bottom: 20px;
-  div:last-child{
+  div:last-child {
     div {
       float: left;
       margin-right: 15px;
     }
-    &:last-child{
+    &:last-child {
       margin-right: 0;
     }
   }
-  div:first-child{
+  div:first-child {
     display: flex;
     flex: 1;
     justify-content: space-between;
     align-items: center;
-    a:first-child{
-      padding: 0;
-      margin: 0;
+    a:first-child {
       color: white;
       font-size: 28px;
       font-weight: bold;
-      &:hover{
+      &:hover {
         text-decoration: underline;
       }
     }
-    a:last-child{
-      color: #B3B3B3;
+    a:last-child {
+      color: #b3b3b3;
       letter-spacing: 1.8px;
       font-size: 10.8px;
       font-weight: bold;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
-  p{
-    color: #A2A2A2;
+  p {
+    color: #a2a2a2;
   }
 `;

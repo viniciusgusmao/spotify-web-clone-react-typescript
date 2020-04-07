@@ -1,18 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from 'components/Button';
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import ArrowBack from 'assets/icons/arrowBack.png';
+import ArrowForward from 'assets/icons/arrowForward.png';
 
 export default function Header() {
   return (
     <BoxHeaderPage>
       <div>
-        <IoIosArrowBack size={30} color="#646464" />
-        <IoIosArrowForward size={30} color="#646464" />
+        <img src={ArrowBack} />
+        <img src={ArrowForward} />
       </div>
       <div>
-        <Button color="#fff" backgroundColor="#0B0B0B" title="Inscrever-se" fontSize={12} />
-        <Button color="#000" backgroundColor="#fff" title="Entrar" fontSize={12} />
+        <Button color="#fff" backgroundColor="#0B0B0B" title="Inscrever-se" fontSize={10} />
+        <Button color="#000" backgroundColor="#fff" title="Entrar" fontSize={10} />
       </div>
     </BoxHeaderPage>
   );
@@ -23,22 +24,22 @@ const BoxHeaderPage = styled.div`
   flex: 1;
   height: 60px;
   justify-content: space-between;
-  background-color: #0B0B0B;
+  background-color: #0b0b0b;
   padding: 10px 30px;
-  div{
+  div {
     width: 50%;
-    &:first-child{
+    &:first-child {
       display: flex;
       align-items: center;
-      svg:first-child{
+      img:first-child {
         margin-right: 18px;
       }
     }
-    &:last-child{
+    &:last-child {
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      button:first-child{
+      button:first-child {
         margin-right: 10px;
       }
     }

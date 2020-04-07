@@ -1,25 +1,32 @@
-import React from 'react';
-import imgPlaylist from 'assets/imgs/example_artist.png';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import playIcon from 'assets/icons/play.png';
 
 type PlaylistProps = {
-  image: string,
-  name: string,
-  description: string,
-}
+  image: string;
+  name: string;
+  description: string;
+};
 
-const Playlist: React.FC<PlaylistProps> = ({ image, name, description }) => (
-  <Container>
-    <img src={require(`../assets/imgs/${image}`)} alt="Playlista" width="150" />
-    <h3>{name.length > 20 ? name.substr(0,17)+'...' : name}</h3>
-    <p>{description.length > 47 ? description.substr(0,39)+'...' : description}</p>
-  </Container>
-);
-
+const Playlist: React.FC<PlaylistProps> = ({ image, name, description }) => {
+  const [showGreenButton, setShowGreenButton] = useState(false);
+  return (
+    <Container
+      onMouseOver={() => setShowGreenButton(true)}
+      onMouseOut={() => setShowGreenButton(false)}
+    >
+      <img src={require(`../assets/imgs/${image}`)} alt="Playlist" width="150" />
+      <h3>{name.length > 20 ? name.substr(0, 17) + '...' : name}</h3>
+      <p>{description.length > 47 ? description.substr(0, 39) + '...' : description}</p>
+      <img style={{ display: showGreenButton ? 'block' : 'none' }} src={playIcon} alt="Play" />
+    </Container>
+  );
+};
 
 export default Playlist;
 
 const Container = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,24 +37,37 @@ const Container = styled.div`
   background-color: #262626;
   padding: 20px;
   border-radius: 10px;
-  img{
+  z-index: 10;
+  cursor: pointer;
+  img {
     margin-bottom: 10px;
   }
-  h3{
+  img:last-child {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    z-index: 5;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  h3 {
     padding: 0;
     margin: 0;
     color: #fff;
     font-size: 12.8px;
-    letter-spacing: 0.2px;
     width: 100%;
     text-align: left;
-    font-weight: bold;
+    font-weight: 700;
   }
-  p{
+  p {
     font-size: 11px;
     line-height: 16px;
     text-align: left;
-    color: #A2A2A2;
+    color: #a2a2a2;
     margin: 5px 0px 0px 0px;
   }
 `;

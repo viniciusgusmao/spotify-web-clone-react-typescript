@@ -5,33 +5,36 @@ import { Container } from 'components/Common';
 import axios from 'axios';
 
 interface ICategory {
-  id: number,
-  title: string,
-  description: string,
+  id: number;
+  title: string;
+  description: string;
   playlists: {
-    id: number,
-    name: string,
-    description: string,
-    image: string
-  }[]
+    id: number;
+    name: string;
+    description: string;
+    image: string;
+  }[];
 }
 
-const Dashboard:React.FC = () => {
-  const [categories, setCategories] = useState<ICategory[]>();
+const Dashboard: React.FC = () => {
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/categories').then((res: any) => {
-      setCategories(res.data);
-    }).catch((error: any) => {
-      console.log(error)
-    })
+    axios
+      .get('http://localhost:3001/categories')
+      .then((res: any) => {
+        setCategories(res.data);
+      })
+      .catch((error: any) => {
+        console.log(error);
+      });
   }, []);
 
   return (
     <>
       <Header />
       <Container>
-        {categories?.map((category:ICategory) => (
+        {categories?.map((category: ICategory) => (
           <Category
             id={category.id}
             title={category.title}
@@ -42,6 +45,6 @@ const Dashboard:React.FC = () => {
       </Container>
     </>
   );
-}
+};
 
 export default Dashboard;

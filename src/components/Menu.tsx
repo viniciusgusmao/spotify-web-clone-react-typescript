@@ -1,34 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import logo from 'assets/imgs/logo.png';
 import homeIcon from 'assets/icons/home.png';
 import homeIconFill from 'assets/icons/home_fill.png';
 import searchIcon from 'assets/icons/search.png';
 import searchIconFill from 'assets/icons/search_fill.png';
-import libraryIcon from 'assets/icons/library.png';
 
-import {
-  Link
-} from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 export default function Menu() {
+  const [homeIcon, setHomeIcon] = useState('home_fill');
+  const [searchIcon, setSearchIcon] = useState('search');
   return (
     <BoxMenu>
       <div className="boxMenuContent">
         <img src={logo} className="logo" alt="Logo Spotify" />
         <div className="menu">
-          <Link className="active" to="/">
-            <img src={homeIconFill} width="20" height="20" />
+          <NavLink
+            activeClassName="active"
+            isActive={(match, location) => {
+              if (!match) {
+                return false;
+              }
+              setHomeIcon('home_fill');
+              setSearchIcon('search');
+              return true;
+            }}
+            to="/"
+            exact
+          >
+            <img src={require(`assets/icons/${homeIcon}.png`)} />
             <span>Início</span>
-          </Link>
-          <Link to="/search">
-            <img src={searchIcon} />
+          </NavLink>
+          <NavLink
+            activeClassName="active"
+            isActive={(match, location) => {
+              if (!match) {
+                return false;
+              }
+              setHomeIcon('home');
+              setSearchIcon('search_fill');
+              return true;
+            }}
+            to="/search"
+          >
+            <img src={require(`assets/icons/${searchIcon}.png`)} />
             <span>Buscar</span>
-          </Link>
-          <Link to="/collection">
-            <img src={libraryIcon} />
+          </NavLink>
+          <NavLink activeClassName="active" to="/collection">
+            <img src={require('assets/icons/library.png')} />
             <span>Sua Biblioteca</span>
-          </Link>
+          </NavLink>
         </div>
       </div>
       <div className="boxMenuRodape">
@@ -46,55 +68,56 @@ const BoxMenu = styled.div`
   justify-content: space-between;
   flex-direction: column;
   height: 100%;
-  div.boxMenuRodape{
+  div.boxMenuRodape {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
     justify-content: center;
     align-items: center;
-    a, span {
-      color: #B3B3B3;
+    a,
+    span {
+      color: #b3b3b3;
       font-size: 12px;
     }
-    a:hover{
+    a:hover {
       text-decoration: underline;
     }
   }
-  div.boxMenuContent{
+  div.boxMenuContent {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    img.logo{
+    img.logo {
       width: 58%;
       margin-top: 20px;
       margin-left: 20px;
       margin-bottom: 14px;
     }
-    div{
+    div {
       display: flex;
       flex-direction: column;
       margin: 9px;
       a {
         display: flex;
-        color: #B3B3B3;
+        color: #b3b3b3;
         padding: 8px;
         font-size: 14px;
         font-weight: bold;
         transition: color 0.2s;
         margin-bottom: 5px;
-        &:hover{
-          color: #FFFFFF;
+        &:hover {
+          color: #ffffff;
         }
-        img{
+        img {
           margin-left: 12px;
           margin-right: 15px;
         }
       }
-      a.active{
-          background-color: #282828;
-          color: #FFFFFF;
-          border-radius: 2px;
-        }
+      a.active {
+        background-color: #282828;
+        color: #ffffff;
+        border-radius: 2px;
+      }
     }
   }
 `;
