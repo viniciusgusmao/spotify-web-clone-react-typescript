@@ -1,25 +1,41 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import playIcon from 'assets/icons/play.png';
+import ModalPlaylist from 'components/ModalPlaylist';
 
 type PlaylistProps = {
   image: string;
   name: string;
   description: string;
+  color: string;
 };
 
-const Playlist: React.FC<PlaylistProps> = ({ image, name, description }) => {
+const Playlist: React.FC<PlaylistProps> = ({ image, name, description, color }) => {
   const [showGreenButton, setShowGreenButton] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   return (
-    <Container
-      onMouseOver={() => setShowGreenButton(true)}
-      onMouseOut={() => setShowGreenButton(false)}
-    >
-      <img src={require(`../assets/imgs/${image}`)} alt="Playlist" width="150" />
-      <h3>{name.length > 20 ? name.substr(0, 17) + '...' : name}</h3>
-      <p>{description.length > 47 ? description.substr(0, 39) + '...' : description}</p>
-      <img style={{ display: showGreenButton ? 'block' : 'none' }} src={playIcon} alt="Play" />
-    </Container>
+    <>
+      <Container
+        onMouseOver={() => setShowGreenButton(true)}
+        onMouseOut={() => setShowGreenButton(false)}
+      >
+        <img src={require(`../assets/imgs/${image}`)} alt="Playlist" width="150" />
+        <h3>{name.length > 20 ? name.substr(0, 17) + '...' : name}</h3>
+        <p>{description.length > 47 ? description.substr(0, 39) + '...' : description}</p>
+        <img
+          onClick={() => setShowModal(true)}
+          style={{ display: showGreenButton ? 'block' : 'none' }}
+          src={playIcon}
+          alt="Play"
+        />
+      </Container>
+      <ModalPlaylist
+        image={image}
+        showModal={showModal}
+        color={color}
+        handleClose={() => setShowModal(false)}
+      />
+    </>
   );
 };
 

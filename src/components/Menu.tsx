@@ -47,10 +47,10 @@ export default function Menu() {
             <img src={require(`assets/icons/${searchIcon}.png`)} />
             <span>Buscar</span>
           </NavLink>
-          <NavLink activeClassName="active" to="/collection">
+          <a href="javascript:;">
             <img src={require('assets/icons/library.png')} />
             <span>Sua Biblioteca</span>
-          </NavLink>
+          </a>
         </div>
       </div>
       <div className="boxMenuRodape">

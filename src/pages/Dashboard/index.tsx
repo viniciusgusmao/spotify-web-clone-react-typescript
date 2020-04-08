@@ -13,6 +13,7 @@ interface ICategory {
     name: string;
     description: string;
     image: string;
+    color: string;
   }[];
 }
 
@@ -31,19 +32,16 @@ const Dashboard: React.FC = () => {
   }, []);
 
   return (
-    <>
-      <Header />
-      <Container>
-        {categories?.map((category: ICategory) => (
-          <Category
-            id={category.id}
-            title={category.title}
-            description={category.description}
-            playlists={category.playlists}
-          />
-        ))}
-      </Container>
-    </>
+    <Container>
+      {categories?.map((category: ICategory) => (
+        <Category
+          id={category.id}
+          title={category.title}
+          description={category.description}
+          playlists={category.playlists}
+        />
+      ))}
+    </Container>
   );
 };
 

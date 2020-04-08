@@ -12,8 +12,20 @@ export default function Header() {
         <img src={ArrowForward} />
       </div>
       <div>
-        <Button color="#fff" backgroundColor="#0B0B0B" title="Inscrever-se" fontSize={10} />
-        <Button color="#000" backgroundColor="#fff" title="Entrar" fontSize={10} />
+        <Button
+          color="#fff"
+          handleClick={() => {}}
+          backgroundColor="#0B0B0B"
+          title="Inscrever-se"
+          fontSize={10}
+        />
+        <Button
+          color="#000"
+          handleClick={() => {}}
+          backgroundColor="#fff"
+          title="Entrar"
+          fontSize={10}
+        />
       </div>
     </BoxHeaderPage>
   );
@@ -22,12 +34,11 @@ export default function Header() {
 const BoxHeaderPage = styled.div`
   display: flex;
   flex: 1;
+  z-index: 99999;
   height: 60px;
   justify-content: space-between;
-  background-color: #0b0b0b;
   padding: 10px 30px;
   div {
-    width: 50%;
     &:first-child {
       display: flex;
       align-items: center;

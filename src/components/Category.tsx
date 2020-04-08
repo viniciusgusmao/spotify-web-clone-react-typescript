@@ -12,6 +12,7 @@ type CategoryProps = {
     name: string;
     description: string;
     image: string;
+    color: string;
   }[];
 };
 
@@ -20,6 +21,7 @@ interface IPlaylist {
   name: string;
   description: string;
   image: string;
+  color: string;
 }
 
 const Category: React.FC<CategoryProps> = ({ id, title, description, playlists }) => (
@@ -31,7 +33,7 @@ const Category: React.FC<CategoryProps> = ({ id, title, description, playlists }
     <p>{description}</p>
     <div>
       {playlists?.map((playlist: IPlaylist) => (
-        <Playlist image={playlist.image} name={playlist.name} description={playlist.description} />
+        <Playlist {...playlist} />
       ))}
     </div>
   </Container>

@@ -1,0 +1,21 @@
+div.ant-modal-header,
+span.ant-modal-close-x {
+  display: none;
+}
+
+div.ant-modal-body {
+  background-color: black;
+  border-radius: 12px !important;
+  padding: 60px;
+}
+
+div.ant-modal-content {
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+div.ant-modal-footer {
+  border: none;
+  display: flex;
+  justify-content: center;
+}

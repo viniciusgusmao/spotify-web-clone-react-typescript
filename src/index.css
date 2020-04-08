@@ -1,4 +1,10 @@
 @font-face {
   font-family: 'Circular';
-  src: local('Circular'), url("./assets/fonts/CircularStd-Book.ttf") format('truetype');
+  src: local('Circular'), url('./assets/fonts/CircularStd-Book.ttf') format('truetype');
+}
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: white;
+  font-family: 'Circular';
 }
