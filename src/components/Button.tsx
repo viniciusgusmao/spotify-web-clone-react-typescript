@@ -8,6 +8,8 @@ type ButtonProps = {
   fontSize?: number;
   handleClick: () => void;
   paddingHorizontal?: number;
+  paddingVertical?: number;
+  borderColor?: string;
 };
 
 // eslint-disable-next-line react/prop-types
@@ -18,13 +20,17 @@ const Button: React.FC<ButtonProps> = ({
   fontSize = 14,
   handleClick,
   paddingHorizontal = 45,
+  paddingVertical = 10,
+  borderColor = 'transparent',
 }) => (
   <ButtonComp
     color={color}
     backgroundColor={backgroundColor}
     fontSize={fontSize}
     paddingHorizontal={paddingHorizontal}
+    paddingVertical={paddingVertical}
     onClick={handleClick}
+    borderColor={borderColor}
   >
     {title}
   </ButtonComp>
@@ -35,6 +41,8 @@ interface IPropsButtonComp {
   backgroundColor: string;
   fontSize: number;
   paddingHorizontal?: number;
+  paddingVertical?: number;
+  borderColor?: string;
 }
 
 const ButtonComp = styled.button<IPropsButtonComp>`
@@ -42,10 +50,9 @@ const ButtonComp = styled.button<IPropsButtonComp>`
   font-weight: 700;
   letter-spacing: 1.85px;
   text-transform: uppercase;
-  border: 2px solid transparent;
+  border: 1px solid ${props => props.borderColor};
   border-radius: 500px;
-  padding: 8px ${props => `${props.paddingHorizontal}px`};
-  height: 38px;
+  padding: ${props => `${props.paddingVertical}px ${props.paddingHorizontal}px`};
   display: flex;
   cursor: pointer;
   text-align: center;
@@ -54,6 +61,7 @@ const ButtonComp = styled.button<IPropsButtonComp>`
   transition: transform 0.1s;
   &:hover {
     transform: scale(1.1);
+    filter: brightness(110%);
   }
 `;
 

@@ -6,7 +6,7 @@ import Button from 'components/Button';
 const { Footer: Ftr } = Layout;
 
 // eslint-disable-next-line no-underscore-dangle
-export default function Footer() {
+const MyFooter: React.FC = () => {
   return (
     <Ftr
       style={{
@@ -35,7 +35,7 @@ export default function Footer() {
       </BoxFooter>
     </Ftr>
   );
-}
+};
 
 const BoxFooter = styled.div`
   display: flex;
@@ -65,3 +65,5 @@ const BoxFooter = styled.div`
     }
   }
 `;
+
+export default MyFooter;

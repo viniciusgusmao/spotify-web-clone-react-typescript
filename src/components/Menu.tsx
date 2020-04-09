@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import logo from 'assets/imgs/logo.png';
-import homeIcon from 'assets/icons/home.png';
-import homeIconFill from 'assets/icons/home_fill.png';
-import searchIcon from 'assets/icons/search.png';
-import searchIconFill from 'assets/icons/search_fill.png';
+import ModalAds from 'components/ModalAds';
 
 import { NavLink } from 'react-router-dom';
 
-export default function Menu() {
+const Menu: React.FC = () => {
   const [homeIcon, setHomeIcon] = useState('home_fill');
   const [searchIcon, setSearchIcon] = useState('search');
+  const [showModal, setShowModal] = useState(false);
   return (
     <BoxMenu>
       <div className="boxMenuContent">
@@ -47,12 +45,13 @@ export default function Menu() {
             <img src={require(`assets/icons/${searchIcon}.png`)} />
             <span>Buscar</span>
           </NavLink>
-          <a href="javascript:;">
+          <a href="javascript:;" onClick={() => setShowModal(true)}>
             <img src={require('assets/icons/library.png')} />
             <span>Sua Biblioteca</span>
           </a>
         </div>
       </div>
+      <ModalAds showModal={showModal} handleClose={() => setShowModal(false)} />
       <div className="boxMenuRodape">
         <a href="#">Cookies</a>
         <span>-</span>
@@ -60,7 +59,7 @@ export default function Menu() {
       </div>
     </BoxMenu>
   );
-}
+};
 
 const BoxMenu = styled.div`
   display: flex;
@@ -121,3 +120,5 @@ const BoxMenu = styled.div`
     }
   }
 `;
+
+export default Menu;

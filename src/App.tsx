@@ -1,12 +1,11 @@
 import * as React from 'react';
 import Dashboard from 'pages/Dashboard';
 import Search from 'pages/Search';
-import Collection from 'pages/Collection';
 import { theme } from './theme';
 import { ThemeProvider } from './styled-components-cs';
 import 'antd/dist/antd.css';
 
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { Layout } from 'antd';
 import Footer from 'components/Footer';
@@ -15,7 +14,7 @@ import MyHeader from 'components/Header';
 
 const { Header, Sider, Content } = Layout;
 
-export default function App() {
+const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <Router>
@@ -67,9 +66,6 @@ export default function App() {
                   <Route path="/search">
                     <Search />
                   </Route>
-                  <Route path="/collection">
-                    <Collection />
-                  </Route>
                 </Switch>
               </Content>
             </Layout>
@@ -79,4 +75,6 @@ export default function App() {
       </Router>
     </ThemeProvider>
   );
-}
+};
+
+export default App;

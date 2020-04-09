@@ -4,7 +4,7 @@ import Button from 'components/Button';
 import ArrowBack from 'assets/icons/arrowBack.png';
 import ArrowForward from 'assets/icons/arrowForward.png';
 
-export default function Header() {
+const Header: React.FC = () => {
   return (
     <BoxHeaderPage>
       <div>
@@ -29,7 +29,7 @@ export default function Header() {
       </div>
     </BoxHeaderPage>
   );
-}
+};
 
 const BoxHeaderPage = styled.div`
   display: flex;
@@ -56,3 +56,5 @@ const BoxHeaderPage = styled.div`
     }
   }
 `;
+
+export default Header;
