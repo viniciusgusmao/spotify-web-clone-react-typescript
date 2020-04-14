@@ -46,18 +46,18 @@ interface IPropsButtonComp {
 }
 
 const ButtonComp = styled.button<IPropsButtonComp>`
-  font-size: ${props => `${props.fontSize}px`};
+  font-size: ${(props) => `${props.fontSize}px`};
   font-weight: 700;
   letter-spacing: 1.85px;
   text-transform: uppercase;
-  border: 1px solid ${props => props.borderColor};
+  border: 1px solid ${(props) => props.borderColor};
   border-radius: 500px;
-  padding: ${props => `${props.paddingVertical}px ${props.paddingHorizontal}px`};
+  padding: ${(props) => `${props.paddingVertical}px ${props.paddingHorizontal}px`};
   display: flex;
   cursor: pointer;
   text-align: center;
-  background-color: ${props => props.backgroundColor};
-  color: ${props => props.color};
+  background-color: ${(props) => props.backgroundColor};
+  color: ${(props) => props.color};
   transition: transform 0.1s;
   &:hover {
     transform: scale(1.1);
