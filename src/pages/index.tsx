@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Dashboard from 'pages/Dashboard';
 import Search from 'pages/Search';
 
@@ -11,15 +11,9 @@ import MyHeader from 'components/Header';
 
 import styled from 'styled-components';
 
-const { Header, Sider, Content } = Layout;
+import { MyContext } from '../App';
 
-type PropsThemeContext = {
-  backgroundColorHeader: string
-}
-const initialThemeContext = {
-  backgroundColorHeader: '#0b0b0b',
-};
-export const MyContext = React.createContext<PropsThemeContext>(initialThemeContext);
+const { Header, Sider, Content } = Layout;
 
 interface IStylesLayout {
   mainLayout: Object,
@@ -59,54 +53,58 @@ const styles:IStylesLayout = {
 };
 
 const Index: React.FC = () => {
+  const theme = React.useContext(MyContext);
+  const [backgroundColor, setBackgroundColor] = useState(theme.backgroundColorHeader);
+  const [opacity, setOpacity] = useState(0.6);
   const changeBackgroundColorOnScroll = (e: any) => {
     const { scrollTop } = e.target;
-    // if (scrollTop > 145) {
-
-    // } else {
-
-    // }
+    if (scrollTop > 145) {
+      setBackgroundColor(theme.backgroundColorHeaderOnScroll);
+      setOpacity(1);
+    } else {
+      setBackgroundColor(theme.backgroundColorHeader);
+      setOpacity(0.6);
+    }
   };
   return (
-    <MyContext.Provider value={initialThemeContext}>
-      <Router>
-        <Layout style={styles.mainLayout} onScroll={changeBackgroundColorOnScroll}>
-          <Layout>
-            <Sider style={styles.sider} width={230}>
-              <Menu />
-            </Sider>
-            <Layout style={styles.contentLayout}>
-              <Header style={styles.header}>
-                <div
-                  style={{
-                    backgroundColor: '#0b0b0b',
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    height: 60,
-                    zIndex: -2,
-                    width: '100%',
-                    opacity: 0.6,
-                  }}
-                />
-                <MyHeader />
-              </Header>
-              <Content style={styles.content}>
-                <Switch>
-                  <Route path="/" exact>
-                    <Dashboard />
-                  </Route>
-                  <Route path="/search">
-                    <Search />
-                  </Route>
-                </Switch>
-              </Content>
-            </Layout>
+    <Router>
+      <Layout style={styles.mainLayout} onScroll={changeBackgroundColorOnScroll}>
+        <Layout>
+          <Sider style={styles.sider} width={230}>
+            <Menu />
+          </Sider>
+          <Layout style={styles.contentLayout}>
+            <Header style={styles.header}>
+              <div
+                style={{
+                  backgroundColor,
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  height: 60,
+                  zIndex: -2,
+                  width: '100%',
+                  opacity,
+                  transition: 'background-color 1s',
+                }}
+              />
+              <MyHeader />
+            </Header>
+            <Content style={styles.content}>
+              <Switch>
+                <Route path="/" exact>
+                  <Dashboard />
+                </Route>
+                <Route path="/search">
+                  <Search />
+                </Route>
+              </Switch>
+            </Content>
           </Layout>
-          <Footer />
         </Layout>
-      </Router>
-    </MyContext.Provider>
+        <Footer />
+      </Layout>
+    </Router>
   );
 };
 

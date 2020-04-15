@@ -5,6 +5,8 @@
 body {
   padding: 0px;
   margin: 0px;
+  /* letter-spacing: 0.05em; */
+  line-height: normal;
   background-color: white;
   font-family: 'Circular';
 }

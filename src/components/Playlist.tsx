@@ -3,14 +3,9 @@ import styled from 'styled-components';
 import playIcon from 'assets/icons/play.png';
 import ModalPlaylist from 'components/ModalPlaylist';
 
-type PlaylistProps = {
-  image: string;
-  name: string;
-  description: string;
-  color: string;
-};
+import { IPlaylist } from 'interfaces';
 
-const Playlist: React.FC<PlaylistProps> = ({ image, name, description, color }) => {
+const Playlist: React.FC<IPlaylist> = ({ id, image = "", name, description, color = "" } : IPlaylist) => {
   const [showGreenButton, setShowGreenButton] = useState(false);
   const [showModal, setShowModal] = useState(false);
   return (

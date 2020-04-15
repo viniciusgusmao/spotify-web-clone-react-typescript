@@ -1,43 +1,35 @@
-import React from 'react';
+import React,{ useState, useEffect } from 'react';
 import styled from 'styled-components';
+import api from 'config/api';
 
 import Playlist from 'components/Playlist';
+import { IPlaylist, ICategory } from 'interfaces';
+import usePlaylists from 'hooks/usePlaylists'
 
-type CategoryProps = {
-  id: number;
-  title: string;
-  description: string;
-  playlists: {
-    id: number;
-    name: string;
-    description: string;
-    image: string;
-    color: string;
-  }[];
-};
-
-interface IPlaylist {
-  id: number;
-  name: string;
-  description: string;
-  image: string;
-  color: string;
+const Category: React.FC<ICategory> = ({ id, title, description }: ICategory) => {
+  const { playlists } = usePlaylists(id);
+  return (
+    <Container>
+      <div>
+        <a>{title}</a>
+        <a href="#">VER TUDO</a>
+      </div>
+      <p>{description}</p>
+      <div>
+        {playlists?.map((playlist: IPlaylist) => (
+          <Playlist
+            key={playlist.id}
+            id={playlist.id}
+            image={playlist.image}
+            name={playlist.name}
+            description={playlist.description}
+            color={playlist.color}
+          />
+        ))}
+      </div>
+    </Container>
+  )
 }
-
-const Category: React.FC<CategoryProps> = ({ id, title, description, playlists }) => (
-  <Container>
-    <div>
-      <a>{title}</a>
-      <a href="#">VER TUDO</a>
-    </div>
-    <p>{description}</p>
-    <div>
-      {playlists?.map((playlist: IPlaylist) => (
-        <Playlist {...playlist} />
-      ))}
-    </div>
-  </Container>
-);
 
 export default Category;
 

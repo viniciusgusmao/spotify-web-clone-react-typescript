@@ -1,44 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import Header from 'components/Header';
-import Category from 'components/Category';
+import Category from 'components/CategoryDashboard';
 import { Container } from 'components/Common';
-import axios from 'axios';
+import { ICategory } from 'interfaces';
 
-interface ICategory {
-  id: number;
-  title: string;
-  description: string;
-  playlists: {
-    id: number;
-    name: string;
-    description: string;
-    image: string;
-    color: string;
-  }[];
-}
+import useCategories from 'hooks/useCategories';
 
 const Dashboard: React.FC = () => {
-  const [categories, setCategories] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get('http://localhost:3001/categories')
-      .then((res: any) => {
-        setCategories(res.data);
-      })
-      .catch((error: any) => {
-        console.log(error);
-      });
-  }, []);
-
+  const { categories } = useCategories();
   return (
     <Container>
       {categories?.map((category: ICategory) => (
         <Category
+          key={category.id}
           id={category.id}
           title={category.title}
           description={category.description}
-          playlists={category.playlists}
         />
       ))}
     </Container>

@@ -4,176 +4,235 @@
       "id": 1,
       "title": "Foco",
       "description": "Música para ajudar na concentração",
-      "playlists": [
-        {
-          "id": 1,
-          "name": "Concentração Perfeita",
-          "description": "Concentração no máximo.",
-          "image": "ab67706f00000002c1ebf493192d994ccd2bed87.jpeg",
-          "color": "#D9DADC"
-        },
-        {
-          "id": 2,
-          "name": "Foco no Estudo",
-          "description": "Piano instrumental para ajudar sua concentração na hora de ler e estudar.",
-          "image": "ab67706f000000026f1beb9a5961dc32f57835e5.jpeg",
-          "color": "#CFC8BE"
-        },
-        {
-          "id": 3,
-          "name": "Lo-Fi Beats",
-          "description": "Beats to relax and focus.",
-          "image": "ab67706f00000002c414e7daf34690c9f983f76e.jpeg",
-          "color": "#9FC3D1"
-        },
-        {
-          "id": 4,
-          "name": "Peaceful Piano",
-          "description": "Relax and indulge with beautiful piano pieces",
-          "image": "ab67706f00000002ca5a7517156021292e5663a6.jpeg",
-          "color": "#A5C6D5"
-        },
-        {
-          "id": 5,
-          "name": "Brain Food",
-          "description": "hypnotic electronic for studies and a relax.",
-          "image": "ab67706f000000021df043181e0a5b20707ce3a9.jpeg",
-          "color": "#D6D6D8"
-        },
-        {
-          "id": 6,
-          "name": "Deep Focus",
-          "description": "Keep calm and focus with ambient and post-rock music.",
-          "image": "ab67706f00000002e4eadd417a05b2546e866934.jpeg",
-          "color": "#302E3C"
-        },
-        {
-          "id": 7,
-          "name": "Reading Soundtrack",
-          "description": "Beautiful scores to accompany your reading.",
-          "image": "ab67706f00000002849e8bffc67e744fdaec65f8.jpeg",
-          "color": "#7E231A"
-        },
-        {
-          "id": 8,
-          "name": "Instrumental Study",
-          "description": "A soft musical backdrop for your studies.",
-          "image": "ab67706f000000025ec8c003898b36c6f73dfac7.jpeg",
-          "color": "#A2C3D2"
-        }
-      ]
+      "image": "cf23ab0343e047daa88703e21c01a4aa.jpeg",
+      "color": "#B39AC7"
     },
     {
       "id": 2,
       "title": "Seu astral",
       "description": "Playlists que combinam com o seu astral.",
-      "playlists": [
-        {
-          "id": 9,
-          "name": "Verão Forever",
-          "description": "Aqui o verão dura 365 dias! Passe o protetor solar, aumente o som e aperte o play!",
-          "image": "ab67706f00000002e67d80f5418a7502d5fce642.jpeg",
-          "color": "#32B2EF"
-        },
-        {
-          "id": 10,
-          "name": "Hits Felizes",
-          "description": "Mantenha a energia positiva!",
-          "image": "ab67706f000000023d7631770cb0914e6c590dea.jpeg",
-          "color": "#E4EDF4"
-        },
-        {
-          "id": 11,
-          "name": "Mood Booster",
-          "description": "Get happy with this pick-me-up playlist full of current feel-good songs!",
-          "image": "ab67706f00000002aa93fe4e8c2d24fc62556cba.jpeg",
-          "color": "#B399BC"
-        },
-        {
-          "id": 12,
-          "name": "Alone Again",
-          "description": "When everything is lonely, I can be my best friend.",
-          "image": "ab67706f0000000265af49474d91827160b56b27.jpeg",
-          "color": "#6D8199"
-        },
-        {
-          "id": 13,
-          "name": "Young, Wild & Free",
-          "description": "That’s how its supposed to be. Living young, wild and free!",
-          "image": "ab67706f00000002e2c938563967c4f22c76ed74.jpeg",
-          "color": "#E9E9E9"
-        },
-        {
-          "id": 14,
-          "name": "Heart Beats",
-          "description": "Dance music for the heart <3",
-          "image": "ab67706f00000002314724fc7ca36a4fce2f1b6a.jpeg",
-          "color": "#0E2D25"
-        },
-        {
-          "id": 15,
-          "name": "Confident Boost",
-          "description": "You're on top of the world. Don't forget it.",
-          "image": "ab67706f00000002326b9347e59a9d3225c76e79.jpeg",
-          "color": "#FDFEFA"
-        },
-        {
-          "id": 16,
-          "name": "Feelin' Good",
-          "description": "Feel good with this positively timeless playlist!",
-          "image": "ab67706f0000000213a02d059c0479e65a850267.jpeg",
-          "color": "#539FF2"
-        }
-      ]
+      "image": "baf681efc57145e180589e027496b101.jpeg",
+      "color": "#509AF4"
     },
     {
       "id": 3,
-      "title": "Playlists de podcasts",
+      "title": "Podcasts",
       "description": "",
-      "playlists": [
-        {
-          "id": 17,
-          "name": "Podcasts que você precisa ouvir",
-          "description": "Querendo descubrir novos podcasts? Então essa é a sua playlist! Atualizada a cada duas semanas às quintas-feiras.",
-          "image": "ab67706f00000002819580eb36e259037b018080.jpeg",
-          "color": "#F2A1B4"
-        },
-        {
-          "id": 18,
-          "name": "Podcasts com até 20min",
-          "description": "Podcasts com episódios curtinhos para entreter e informar você. Atualizada toda segunda-feira.",
-          "image": "ab67706f00000002d07175691b2c9795eab2d282.jpeg",
-          "color": "#477E3B"
-        },
-        {
-          "id": 19,
-          "name": "Episódios do mês",
-          "description": "Os melhores episódios do mês dos maiores podcasts do Brasil. Atualizada sempre no primeiro dia de cada mês.",
-          "image": "ab67706f000000021d08546a1e5714f70a7e0363.jpeg",
-          "color": "#CAB2C0"
-        },
-        {
-          "id": 20,
-          "name": "Acalmando a mente",
-          "description": "Tire um tempinho para cuidar de você. Atualizada a cada duas semanas às quartas-feiras.",
-          "image": "ab67706f00000002c81e21965725b6477f357a3e.jpeg",
-          "color": "#B49AC7"
-        },
-        {
-          "id": 21,
-          "name": "Crime e suspense",
-          "description": "Você vai se arrepiar com essas histórias de crime e suspense. Atualizada sempre na primeira quarta-feira de todo mês.",
-          "image": "ab67706f0000000273705f40d869c1b7d7f125aa.jpeg",
-          "color": "#ED4733"
-        },
-        {
-          "id": 22,
-          "name": "Rindo Alto",
-          "description": "Abra um sorriso e anime seu dia com esses podcasts. Atualizada toda terça-feira.",
-          "image": "ab67706f00000002a6af44f16e7e06488352c414.jpeg",
-          "color": "#8E2A32"
-        }
-      ]
+      "image": "ad4d5c268a214f78920517e76e6ed107.jpeg",
+      "color": "#C9F162"
+    },
+    {
+      "id": 4,
+      "title": "Novos Lançamentos",
+      "description": "",
+      "image": "acc7b5d7b1264d0593ec05c020d0a689.jpeg",
+      "color": "#9DBFCE"
+    },
+    {
+      "id": 5,
+      "title": "Sertanejo",
+      "description": "",
+      "image": "fbfe20a3a90b4fcca73be4495b5e6d5b.jpeg",
+      "color": "#C19485"
+    },
+    {
+      "id": 6,
+      "title": "Pop",
+      "description": "",
+      "image": "d355f48a90b64c25b6e004179a596e51.jpeg",
+      "color": "#C2EFC7"
+    },
+    {
+      "id": 7,
+      "title": "Eletrônica / Dance",
+      "description": "",
+      "image": "3c419cbc46e5430795e056298c34702d.jpeg",
+      "color": "#9AEDDE"
+    },
+    {
+      "id": 8,
+      "title": "Música Latina",
+      "description": "",
+      "image": "425441863ab0468c8323b7f0143c2bfb.jpeg",
+      "color": "#ED6238"
+    }
+  ],
+  "playlists": [
+    {
+      "id": 17,
+      "name": "Podcasts que você precisa ouvir",
+      "description": "Querendo descubrir novos podcasts? Então essa é a sua playlist! Atualizada a cada duas semanas às quintas-feiras.",
+      "image": "ab67706f00000002819580eb36e259037b018080.jpeg",
+      "color": "#F2A1B4",
+      "categoryId": 3
+    },
+    {
+      "id": 18,
+      "name": "Podcasts com até 20min",
+      "description": "Podcasts com episódios curtinhos para entreter e informar você. Atualizada toda segunda-feira.",
+      "image": "ab67706f00000002d07175691b2c9795eab2d282.jpeg",
+      "color": "#477E3B",
+      "categoryId": 3
+    },
+    {
+      "id": 19,
+      "name": "Episódios do mês",
+      "description": "Os melhores episódios do mês dos maiores podcasts do Brasil. Atualizada sempre no primeiro dia de cada mês.",
+      "image": "ab67706f000000021d08546a1e5714f70a7e0363.jpeg",
+      "color": "#CAB2C0",
+      "categoryId": 3
+    },
+    {
+      "id": 20,
+      "name": "Acalmando a mente",
+      "description": "Tire um tempinho para cuidar de você. Atualizada a cada duas semanas às quartas-feiras.",
+      "image": "ab67706f00000002c81e21965725b6477f357a3e.jpeg",
+      "color": "#B49AC7",
+      "categoryId": 3
+    },
+    {
+      "id": 21,
+      "name": "Crime e suspense",
+      "description": "Você vai se arrepiar com essas histórias de crime e suspense. Atualizada sempre na primeira quarta-feira de todo mês.",
+      "image": "ab67706f0000000273705f40d869c1b7d7f125aa.jpeg",
+      "color": "#ED4733",
+      "categoryId": 3
+    },
+    {
+      "id": 22,
+      "name": "Rindo Alto",
+      "description": "Abra um sorriso e anime seu dia com esses podcasts. Atualizada toda terça-feira.",
+      "image": "ab67706f00000002a6af44f16e7e06488352c414.jpeg",
+      "color": "#8E2A32",
+      "categoryId": 3
+    },
+    {
+      "id": 9,
+      "name": "Verão Forever",
+      "description": "Aqui o verão dura 365 dias! Passe o protetor solar, aumente o som e aperte o play!",
+      "image": "ab67706f00000002e67d80f5418a7502d5fce642.jpeg",
+      "color": "#32B2EF",
+      "categoryId": 2
+    },
+    {
+      "id": 10,
+      "name": "Hits Felizes",
+      "description": "Mantenha a energia positiva!",
+      "image": "ab67706f000000023d7631770cb0914e6c590dea.jpeg",
+      "color": "#E4EDF4",
+      "categoryId": 2
+    },
+    {
+      "id": 11,
+      "name": "Mood Booster",
+      "description": "Get happy with this pick-me-up playlist full of current feel-good songs!",
+      "image": "ab67706f00000002aa93fe4e8c2d24fc62556cba.jpeg",
+      "color": "#B399BC",
+      "categoryId": 2
+    },
+    {
+      "id": 12,
+      "name": "Alone Again",
+      "description": "When everything is lonely, I can be my best friend.",
+      "image": "ab67706f0000000265af49474d91827160b56b27.jpeg",
+      "color": "#6D8199",
+      "categoryId": 2
+    },
+    {
+      "id": 13,
+      "name": "Young, Wild & Free",
+      "description": "That’s how its supposed to be. Living young, wild and free!",
+      "image": "ab67706f00000002e2c938563967c4f22c76ed74.jpeg",
+      "color": "#E9E9E9",
+      "categoryId": 2
+    },
+    {
+      "id": 14,
+      "name": "Heart Beats",
+      "description": "Dance music for the heart <3",
+      "image": "ab67706f00000002314724fc7ca36a4fce2f1b6a.jpeg",
+      "color": "#0E2D25",
+      "categoryId": 2
+    },
+    {
+      "id": 15,
+      "name": "Confident Boost",
+      "description": "You're on top of the world. Don't forget it.",
+      "image": "ab67706f00000002326b9347e59a9d3225c76e79.jpeg",
+      "color": "#FDFEFA",
+      "categoryId": 2
+    },
+    {
+      "id": 16,
+      "name": "Feelin' Good",
+      "description": "Feel good with this positively timeless playlist!",
+      "image": "ab67706f0000000213a02d059c0479e65a850267.jpeg",
+      "color": "#539FF2",
+      "categoryId": 2
+    },
+    {
+      "id": 1,
+      "name": "Concentração Perfeita",
+      "description": "Concentração no máximo.",
+      "image": "ab67706f00000002c1ebf493192d994ccd2bed87.jpeg",
+      "color": "#D9DADC",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "name": "Foco no Estudo",
+      "description": "Piano instrumental para ajudar sua concentração na hora de ler e estudar.",
+      "image": "ab67706f000000026f1beb9a5961dc32f57835e5.jpeg",
+      "color": "#CFC8BE",
+      "categoryId": 1
+    },
+    {
+      "id": 3,
+      "name": "Lo-Fi Beats",
+      "description": "Beats to relax and focus.",
+      "image": "ab67706f00000002c414e7daf34690c9f983f76e.jpeg",
+      "color": "#9FC3D1",
+      "categoryId": 1
+    },
+    {
+      "id": 4,
+      "name": "Peaceful Piano",
+      "description": "Relax and indulge with beautiful piano pieces",
+      "image": "ab67706f00000002ca5a7517156021292e5663a6.jpeg",
+      "color": "#A5C6D5",
+      "categoryId": 1
+    },
+    {
+      "id": 5,
+      "name": "Brain Food",
+      "description": "hypnotic electronic for studies and a relax.",
+      "image": "ab67706f000000021df043181e0a5b20707ce3a9.jpeg",
+      "color": "#D6D6D8",
+      "categoryId": 1
+    },
+    {
+      "id": 6,
+      "name": "Deep Focus",
+      "description": "Keep calm and focus with ambient and post-rock music.",
+      "image": "ab67706f00000002e4eadd417a05b2546e866934.jpeg",
+      "color": "#302E3C",
+      "categoryId": 1
+    },
+    {
+      "id": 7,
+      "name": "Reading Soundtrack",
+      "description": "Beautiful scores to accompany your reading.",
+      "image": "ab67706f00000002849e8bffc67e744fdaec65f8.jpeg",
+      "color": "#7E231A",
+      "categoryId": 1
+    },
+    {
+      "id": 8,
+      "name": "Instrumental Study",
+      "description": "A soft musical backdrop for your studies.",
+      "image": "ab67706f000000025ec8c003898b36c6f73dfac7.jpeg",
+      "color": "#A2C3D2",
+      "categoryId": 1
     }
   ]
 }
