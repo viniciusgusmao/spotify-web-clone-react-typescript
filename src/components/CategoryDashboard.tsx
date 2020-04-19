@@ -1,10 +1,9 @@
-import React,{ useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import api from 'config/api';
 
 import Playlist from 'components/Playlist';
 import { IPlaylist, ICategory } from 'interfaces';
-import usePlaylists from 'hooks/usePlaylists'
+import usePlaylists from 'hooks/usePlaylists';
 
 const Category: React.FC<ICategory> = ({ id, title, description }: ICategory) => {
   const { playlists } = usePlaylists(id);
@@ -14,7 +13,7 @@ const Category: React.FC<ICategory> = ({ id, title, description }: ICategory) =>
         <a>{title}</a>
         <a href="#">VER TUDO</a>
       </div>
-      <p>{description}</p>
+      {description != '' && <p>{description}</p>}
       <div>
         {playlists?.map((playlist: IPlaylist) => (
           <Playlist
@@ -28,8 +27,8 @@ const Category: React.FC<ICategory> = ({ id, title, description }: ICategory) =>
         ))}
       </div>
     </Container>
-  )
-}
+  );
+};
 
 export default Category;
 
@@ -52,6 +51,7 @@ const Container = styled.div`
     flex: 1;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 18px;
     a:first-child {
       color: white;
       font-size: 28px;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Dashboard from 'pages/Dashboard';
 import Search from 'pages/Search';
+import Genre from 'pages/Genre';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -16,14 +17,14 @@ import { MyContext } from '../App';
 const { Header, Sider, Content } = Layout;
 
 interface IStylesLayout {
-  mainLayout: Object,
-  sider: Object,
-  header: Object,
-  content: Object,
-  contentLayout: Object,
+  mainLayout: Object;
+  sider: Object;
+  header: Object;
+  content: Object;
+  contentLayout: Object;
 }
 
-const styles:IStylesLayout = {
+const styles: IStylesLayout = {
   mainLayout: {
     height: window.innerHeight,
     minHeight: 350,
@@ -97,6 +98,9 @@ const Index: React.FC = () => {
                 </Route>
                 <Route path="/search">
                   <Search />
+                </Route>
+                <Route path="/genre/:id">
+                  <Genre />
                 </Route>
               </Switch>
             </Content>
