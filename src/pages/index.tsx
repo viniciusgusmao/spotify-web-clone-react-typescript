@@ -12,8 +12,6 @@ import MyHeader from 'components/Header';
 
 import styled from 'styled-components';
 
-import { MyContext } from '../App';
-
 const { Header, Sider, Content } = Layout;
 
 interface IStylesLayout {
@@ -21,7 +19,6 @@ interface IStylesLayout {
   sider: Object;
   header: Object;
   content: Object;
-  contentLayout: Object;
 }
 
 const styles: IStylesLayout = {
@@ -34,9 +31,6 @@ const styles: IStylesLayout = {
   },
   sider: {
     backgroundColor: '#040404',
-  },
-  contentLayout: {
-    backgroundColor: '#121212',
   },
   header: {
     margin: 0,
@@ -54,27 +48,31 @@ const styles: IStylesLayout = {
 };
 
 const Index: React.FC = () => {
-  const theme = React.useContext(MyContext);
-  const [backgroundColor, setBackgroundColor] = useState(theme.backgroundColorHeader);
+  let bgHeader = String(localStorage.getItem('backgroundHeader'));
+  const [backgroundColor, setBackgroundColor] = useState(bgHeader);
   const [opacity, setOpacity] = useState(0.6);
+
   const changeBackgroundColorOnScroll = (e: any) => {
     const { scrollTop } = e.target;
+    let bgHeader = String(localStorage.getItem('backgroundHeader'));
+    let bgHeaderOnScroll = String(localStorage.getItem('backgroundHeaderOnScroll'));
     if (scrollTop > 145) {
-      setBackgroundColor(theme.backgroundColorHeaderOnScroll);
+      setBackgroundColor(bgHeaderOnScroll);
       setOpacity(1);
     } else {
-      setBackgroundColor(theme.backgroundColorHeader);
+      setBackgroundColor(bgHeader);
       setOpacity(0.6);
     }
   };
+
   return (
     <Router>
-      <Layout style={styles.mainLayout} onScroll={changeBackgroundColorOnScroll}>
+      <Layout style={styles.mainLayout}>
         <Layout>
           <Sider style={styles.sider} width={230}>
             <Menu />
           </Sider>
-          <Layout style={styles.contentLayout}>
+          <ContentLayout onScroll={changeBackgroundColorOnScroll}>
             <Header style={styles.header}>
               <div
                 style={{
@@ -86,7 +84,7 @@ const Index: React.FC = () => {
                   zIndex: -2,
                   width: '100%',
                   opacity,
-                  transition: 'background-color 1s',
+                  transition: 'background-color 0.5s',
                 }}
               />
               <MyHeader />
@@ -104,12 +102,16 @@ const Index: React.FC = () => {
                 </Route>
               </Switch>
             </Content>
-          </Layout>
+          </ContentLayout>
         </Layout>
         <Footer />
       </Layout>
     </Router>
   );
 };
+
+const ContentLayout = styled(Layout)`
+  background-color: #121212;
+`;
 
 export default Index;

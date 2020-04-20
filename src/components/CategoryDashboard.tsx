@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import Playlist from 'components/Playlist';
@@ -10,7 +10,7 @@ const Category: React.FC<ICategory> = ({ id, title, description }: ICategory) =>
   return (
     <Container>
       <div>
-        <a>{title}</a>
+        <a href="#">{title}</a>
         <a href="#">VER TUDO</a>
       </div>
       {description != '' && <p>{description}</p>}

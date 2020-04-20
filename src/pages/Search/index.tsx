@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Category from 'components/CategorySearch';
 import { Container } from 'components/Common';
 import { ICategory } from 'interfaces';

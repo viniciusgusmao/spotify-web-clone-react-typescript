@@ -3,7 +3,13 @@ import styled from 'styled-components';
 
 import { ICategory } from 'interfaces';
 
-const CategorySearch: React.FC<ICategory> = ({ id, title, description, image = "", color = ""}: ICategory) => {
+const CategorySearch: React.FC<ICategory> = ({
+  id,
+  title,
+  description,
+  image = '',
+  color = '',
+}: ICategory) => {
   return (
     <Container backgroundColor={color} image={image}>
       <img src={`https://t.scdn.co/images/${image}`} alt={title} />
@@ -27,16 +33,17 @@ const Container = styled.div<IContainer>`
   margin-right: 18px;
   border-radius: 8px;
   background: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.4));
-  background-color: ${(props) => props.backgroundColor};
-  img{
-    transform: rotate(25deg) translate(18%,-2%);
+  background-color: ${props => props.backgroundColor};
+  img {
+    transform: rotate(25deg) translate(18%, -2%);
     width: 100px;
     height: 100px;
     position: absolute;
     bottom: 0;
     right: 0;
-    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    z-index: 1;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     clip-path: polygon(63% 0, 96% 70%, 94% 78%, 65% 92%, 0 92%, 0 0);
   }
   p {
@@ -44,9 +51,8 @@ const Container = styled.div<IContainer>`
     font-size: 24px;
     padding: 16px;
     font-weight: bold;
-    z-index: 999;
+    z-index: 2;
   }
 `;
 
 export default CategorySearch;
-

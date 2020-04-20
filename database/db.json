@@ -59,6 +59,46 @@
   ],
   "playlists": [
     {
+      "id": 84,
+      "name": "Crime e suspense",
+      "description": "Você vai se arrepiar com essas histórias de crime e suspense. Atualizada sempre na primeira quarta-feira de todo mês.",
+      "image": "ab67706f0000000273705f40d869c1b7d7f125aa.jpeg",
+      "color": "#ED4733",
+      "categoryId": 4
+    },
+    {
+      "id": 85,
+      "name": "Crime e suspense",
+      "description": "Você vai se arrepiar com essas histórias de crime e suspense. Atualizada sempre na primeira quarta-feira de todo mês.",
+      "image": "ab67706f0000000273705f40d869c1b7d7f125aa.jpeg",
+      "color": "#ED4733",
+      "categoryId": 5
+    },
+    {
+      "id": 86,
+      "name": "Crime e suspense",
+      "description": "Você vai se arrepiar com essas histórias de crime e suspense. Atualizada sempre na primeira quarta-feira de todo mês.",
+      "image": "ab67706f0000000273705f40d869c1b7d7f125aa.jpeg",
+      "color": "#ED4733",
+      "categoryId": 6
+    },
+    {
+      "id": 87,
+      "name": "Crime e suspense",
+      "description": "Você vai se arrepiar com essas histórias de crime e suspense. Atualizada sempre na primeira quarta-feira de todo mês.",
+      "image": "ab67706f0000000273705f40d869c1b7d7f125aa.jpeg",
+      "color": "#ED4733",
+      "categoryId": 7
+    },
+    {
+      "id": 88,
+      "name": "Crime e suspense",
+      "description": "Você vai se arrepiar com essas histórias de crime e suspense. Atualizada sempre na primeira quarta-feira de todo mês.",
+      "image": "ab67706f0000000273705f40d869c1b7d7f125aa.jpeg",
+      "color": "#ED4733",
+      "categoryId": 8
+    },
+    {
       "id": 17,
       "name": "Podcasts que você precisa ouvir",
       "description": "Querendo descubrir novos podcasts? Então essa é a sua playlist! Atualizada a cada duas semanas às quintas-feiras.",

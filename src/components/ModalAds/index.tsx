@@ -3,7 +3,6 @@ import '../ModalPlaylist/style.css';
 import { Modal } from 'antd';
 import Button from 'components/Button';
 import styled from 'styled-components';
-import Tick from 'components/Tick';
 import List from 'components/ModalAds/List';
 
 interface IModalAds {

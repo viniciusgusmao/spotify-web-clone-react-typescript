@@ -27,7 +27,7 @@ const Menu: React.FC = () => {
             to="/"
             exact
           >
-            <img src={require(`assets/icons/${homeIcon}.png`)} />
+            <img src={require(`assets/icons/${homeIcon}.png`)} alt="iconHome" />
             <span>Início</span>
           </NavLink>
           <NavLink
@@ -42,11 +42,11 @@ const Menu: React.FC = () => {
             }}
             to="/search"
           >
-            <img src={require(`assets/icons/${searchIcon}.png`)} />
+            <img src={require(`assets/icons/${searchIcon}.png`)} alt="iconSearch" />
             <span>Buscar</span>
           </NavLink>
-          <a href="javascript:;" onClick={() => setShowModal(true)}>
-            <img src={require('assets/icons/library.png')} />
+          <a href="#" onClick={() => setShowModal(true)}>
+            <img src={require('assets/icons/library.png')} alt="iconSearch" />
             <span>Sua Biblioteca</span>
           </a>
         </div>
