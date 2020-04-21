@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Category from 'components/CategorySearch';
 import { Container } from 'components/Common';
 import { ICategory } from 'interfaces';
@@ -9,6 +9,10 @@ import styled from 'styled-components';
 
 const Search: React.FC = () => {
   const { categories } = useCategories();
+  useEffect(() => {
+    localStorage.setItem('backgroundHeader', '#080808');
+    localStorage.setItem('backgroundHeaderOnScroll', '#080808');
+  }, []);
   return (
     <ContainerSearch>
       <h1>Navegar por todas as seções</h1>

@@ -1,25 +1,35 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Category from 'components/CategoryDashboard';
 import { Container } from 'components/Common';
 import { useParams } from 'react-router-dom';
-import { useCategory } from 'hooks/useCategories';
+import api from 'config/api';
 import styled from 'styled-components';
+import { ICategory } from 'interfaces';
 
 import { convertHexToRgb, convertHexToRgba } from 'utils';
 
 const Genre: React.FC = () => {
   let { id } = useParams();
-  let category_id = Number(id);
-  const { category } = useCategory(category_id);
+  const [backgroundGradientPage, setBackgroundGradientPage] = useState('transparent');
+  const [category, setCategory] = useState<ICategory>();
+
   useEffect(() => {
-    localStorage.setItem('backgroundHeader', '#fe4321');
-    localStorage.setItem('backgroundHeaderOnScroll', category ? category.color : '#121212');
-    localStorage.setItem('backgroundGradientPage', category ? category.color : '#121212');
-  }, [category]);
+    api
+      .get(`categories/${id}`)
+      .then((res: any) => {
+        setCategory(res.data);
+        setBackgroundGradientPage(res.data.color);
+        localStorage.setItem('backgroundHeader', '#080808');
+        localStorage.setItem('backgroundHeaderOnScroll', res.data.color);
+      })
+      .catch((error: any) => {
+        console.log(error);
+      });
+  }, [id]);
 
   return (
     <>
-      <GradientBox backgroundColor={String(localStorage.getItem('backgroundGradientPage'))} />
+      <GradientBox backgroundColor={backgroundGradientPage} />
       <Container>
         {category && (
           <>

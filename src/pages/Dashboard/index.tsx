@@ -8,8 +8,8 @@ import { useCategories } from 'hooks/useCategories';
 const Dashboard: React.FC = () => {
   const { categories } = useCategories();
   useEffect(() => {
-    localStorage.setItem('backgroundHeader', '#090909');
-    localStorage.setItem('backgroundHeaderOnScroll', '#121212');
+    localStorage.setItem('backgroundHeader', '#080808');
+    localStorage.setItem('backgroundHeaderOnScroll', '#080808');
   }, []);
   return (
     <Container>

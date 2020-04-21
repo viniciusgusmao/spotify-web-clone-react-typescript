@@ -8,5 +8,5 @@ export const convertHexToRgb = (color: string): string => {
 };
 
 export const convertHexToRgba = (color: string): string => {
-  return `rgba(${hexToR(color)},${hexToG(color)},${hexToB(color)},1)`;
+  return `rgba(${hexToR(color)},${hexToG(color)},${hexToB(color)},0.5)`;
 };

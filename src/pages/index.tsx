@@ -50,7 +50,7 @@ const styles: IStylesLayout = {
 const Index: React.FC = () => {
   let bgHeader = String(localStorage.getItem('backgroundHeader'));
   const [backgroundColor, setBackgroundColor] = useState(bgHeader);
-  const [opacity, setOpacity] = useState(0.6);
+  const [opacity, setOpacity] = useState(0.5);
 
   const changeBackgroundColorOnScroll = (e: any) => {
     const { scrollTop } = e.target;
@@ -61,7 +61,7 @@ const Index: React.FC = () => {
       setOpacity(1);
     } else {
       setBackgroundColor(bgHeader);
-      setOpacity(0.6);
+      setOpacity(0.5);
     }
   };
 
@@ -73,7 +73,18 @@ const Index: React.FC = () => {
             <Menu />
           </Sider>
           <ContentLayout onScroll={changeBackgroundColorOnScroll}>
-            <Header style={styles.header}>
+            <Header
+              style={{
+                margin: 0,
+                padding: 0,
+                backgroundColor: 'transparent',
+                height: 60,
+                position: 'fixed',
+                zIndex: 999,
+                width: '100%',
+                paddingRight: 230,
+              }}
+            >
               <div
                 style={{
                   backgroundColor,
@@ -83,8 +94,8 @@ const Index: React.FC = () => {
                   height: 60,
                   zIndex: -2,
                   width: '100%',
-                  opacity,
                   transition: 'background-color 0.5s',
+                  opacity,
                 }}
               />
               <MyHeader />
