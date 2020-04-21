@@ -3,13 +3,25 @@ import styled from 'styled-components';
 import Button from 'components/Button';
 import ArrowBack from 'assets/icons/arrowBack.png';
 import ArrowForward from 'assets/icons/arrowForward.png';
+import InputSearch from 'components/InputSearch';
+import { useHistory } from 'react-router-dom';
 
-const Header: React.FC = () => {
+const defaultProps = {
+  currentPage: '',
+};
+
+type HeaderProps = {
+  currentPage: string;
+} & typeof defaultProps;
+
+const Header: React.FC<HeaderProps> = ({ currentPage }) => {
+  const history = useHistory();
   return (
     <BoxHeaderPage>
       <div>
-        <img src={ArrowBack} />
-        <img src={ArrowForward} />
+        <img src={ArrowBack} alt="Voltar" onClick={() => history.goBack()} />
+        <img src={ArrowForward} alt="Avançar" onClick={() => history.goForward()} />
+        {currentPage == 'search' && <InputSearch />}
       </div>
       <div>
         <Button
@@ -42,6 +54,9 @@ const BoxHeaderPage = styled.div`
     &:first-child {
       display: flex;
       align-items: center;
+      img {
+        cursor: pointer;
+      }
       img:first-child {
         margin-right: 18px;
       }

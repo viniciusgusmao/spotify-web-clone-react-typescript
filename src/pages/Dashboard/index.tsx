@@ -5,11 +5,16 @@ import { ICategory } from 'interfaces';
 
 import { useCategories } from 'hooks/useCategories';
 
-const Dashboard: React.FC = () => {
+type Props = {
+  handleCurrentPage: () => void;
+};
+
+const Dashboard: React.FC<Props> = ({ handleCurrentPage }) => {
   const { categories } = useCategories();
   useEffect(() => {
     localStorage.setItem('backgroundHeader', '#080808');
     localStorage.setItem('backgroundHeaderOnScroll', '#080808');
+    handleCurrentPage();
   }, []);
   return (
     <Container>

@@ -8,7 +8,11 @@ import { ICategory } from 'interfaces';
 
 import { convertHexToRgb, convertHexToRgba } from 'utils';
 
-const Genre: React.FC = () => {
+type Props = {
+  handleCurrentPage: () => void;
+};
+
+const Genre: React.FC<Props> = ({ handleCurrentPage }) => {
   let { id } = useParams();
   const [backgroundGradientPage, setBackgroundGradientPage] = useState('transparent');
   const [category, setCategory] = useState<ICategory>();
@@ -19,8 +23,8 @@ const Genre: React.FC = () => {
       .then((res: any) => {
         setCategory(res.data);
         setBackgroundGradientPage(res.data.color);
-        localStorage.setItem('backgroundHeader', '#080808');
         localStorage.setItem('backgroundHeaderOnScroll', res.data.color);
+        handleCurrentPage();
       })
       .catch((error: any) => {
         console.log(error);

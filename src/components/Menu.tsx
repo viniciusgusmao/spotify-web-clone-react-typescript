@@ -1,45 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import logo from 'assets/imgs/logo.png';
 import ModalAds from 'components/ModalAds';
 
 import { NavLink } from 'react-router-dom';
 
-const Menu: React.FC = () => {
+type Props = {
+  currentPage: string;
+};
+
+const Menu: React.FC<Props> = ({ currentPage }) => {
   const [homeIcon, setHomeIcon] = useState('home_fill');
   const [searchIcon, setSearchIcon] = useState('search');
   const [showModal, setShowModal] = useState(false);
+  useEffect(() => {
+    console.log(currentPage);
+    switch (currentPage) {
+      case '/':
+        setHomeIcon('home_fill');
+        setSearchIcon('search');
+        break;
+      case 'search':
+      case 'genre':
+        setHomeIcon('home');
+        setSearchIcon('search_fill');
+        break;
+      default:
+        break;
+    }
+  }, [currentPage]);
   return (
     <BoxMenu>
       <div className="boxMenuContent">
         <img src={logo} className="logo" alt="Logo Spotify" />
         <div className="menu">
-          <NavLink
-            activeClassName="active"
-            isActive={(match, location) => {
-              if (!match) {
-                return false;
-              }
-              setHomeIcon('home_fill');
-              setSearchIcon('search');
-              return true;
-            }}
-            to="/"
-            exact
-          >
+          <NavLink className={currentPage == '/' ? 'active' : ''} to="/" exact>
             <img src={require(`assets/icons/${homeIcon}.png`)} alt="iconHome" />
             <span>Início</span>
           </NavLink>
           <NavLink
-            activeClassName="active"
-            isActive={(match, location) => {
-              if (!match) {
-                return false;
-              }
-              setHomeIcon('home');
-              setSearchIcon('search_fill');
-              return true;
-            }}
+            className={currentPage == 'genre' || currentPage == 'search' ? 'active' : ''}
             to="/search"
           >
             <img src={require(`assets/icons/${searchIcon}.png`)} alt="iconSearch" />
@@ -110,6 +110,9 @@ const BoxMenu = styled.div`
         img {
           margin-left: 12px;
           margin-right: 15px;
+        }
+        span {
+          margin-top: 4px;
         }
       }
       a.active {

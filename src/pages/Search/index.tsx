@@ -7,11 +7,16 @@ import { Link } from 'react-router-dom';
 import { useCategories } from 'hooks/useCategories';
 import styled from 'styled-components';
 
-const Search: React.FC = () => {
+type Props = {
+  handleCurrentPage: () => void;
+};
+
+const Search: React.FC<Props> = ({ handleCurrentPage }) => {
   const { categories } = useCategories();
   useEffect(() => {
     localStorage.setItem('backgroundHeader', '#080808');
     localStorage.setItem('backgroundHeaderOnScroll', '#080808');
+    handleCurrentPage();
   }, []);
   return (
     <ContainerSearch>

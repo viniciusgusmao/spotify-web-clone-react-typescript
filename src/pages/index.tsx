@@ -50,6 +50,7 @@ const styles: IStylesLayout = {
 const Index: React.FC = () => {
   let bgHeader = String(localStorage.getItem('backgroundHeader'));
   const [backgroundColor, setBackgroundColor] = useState(bgHeader);
+  const [currentPage, setCurrentPage] = useState('');
   const [opacity, setOpacity] = useState(0.5);
 
   const changeBackgroundColorOnScroll = (e: any) => {
@@ -70,21 +71,10 @@ const Index: React.FC = () => {
       <Layout style={styles.mainLayout}>
         <Layout>
           <Sider style={styles.sider} width={230}>
-            <Menu />
+            <Menu currentPage={currentPage} />
           </Sider>
           <ContentLayout onScroll={changeBackgroundColorOnScroll}>
-            <Header
-              style={{
-                margin: 0,
-                padding: 0,
-                backgroundColor: 'transparent',
-                height: 60,
-                position: 'fixed',
-                zIndex: 999,
-                width: '100%',
-                paddingRight: 230,
-              }}
-            >
+            <Header style={styles.header}>
               <div
                 style={{
                   backgroundColor,
@@ -98,18 +88,18 @@ const Index: React.FC = () => {
                   opacity,
                 }}
               />
-              <MyHeader />
+              <MyHeader currentPage={currentPage} />
             </Header>
             <Content style={styles.content}>
               <Switch>
                 <Route path="/" exact>
-                  <Dashboard />
+                  <Dashboard handleCurrentPage={() => setCurrentPage('/')} />
                 </Route>
                 <Route path="/search">
-                  <Search />
+                  <Search handleCurrentPage={() => setCurrentPage('search')} />
                 </Route>
                 <Route path="/genre/:id">
-                  <Genre />
+                  <Genre handleCurrentPage={() => setCurrentPage('genre')} />
                 </Route>
               </Switch>
             </Content>
