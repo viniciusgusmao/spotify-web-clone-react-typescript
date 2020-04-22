@@ -16,7 +16,9 @@ Spotify is the audio streaming service that I use most in my daily life, whether
 - Eslint
 - Prettier
 
-## Screenshots
+## Screenshot
+
+![demo](https://i.ibb.co/s21X061/Spotify-In-cio-1.gif)
 
 ## Installation
 I had to mock the data of categories and playlists because performing the integration with the official Spotify API was not the goal of this project. So, I used the **json-server** package to do this job.
