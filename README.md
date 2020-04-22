@@ -1,5 +1,5 @@
 # Spotify Web Clone
-> This project is an attempt to reproduce some features of [Spotify Web](https://open.spotify.com/ "Spotify Web"), using React with Typescript as it main language/framework.
+> This project is an attempt to reproduce some features of [Spotify Web](https://open.spotify.com/ "Spotify Web"), using React with Typescript.
 
 ## Overview and Goals
 
