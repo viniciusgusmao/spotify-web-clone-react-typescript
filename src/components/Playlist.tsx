@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import playIcon from 'assets/icons/play.png';
 import ModalPlaylist from 'components/ModalPlaylist';
 
-import { IPlaylist } from 'interfaces';
+import { IGenericItem } from 'interfaces';
 
-const Playlist: React.FC<IPlaylist> = ({ id, image = "", name, description, color = "" } : IPlaylist) => {
+const Playlist: React.FC<IGenericItem> = ({ id, image = "", name, description, color = "" } : IGenericItem) => {
   const [showGreenButton, setShowGreenButton] = useState(false);
   const [showModal, setShowModal] = useState(false);
   return (
@@ -15,7 +15,7 @@ const Playlist: React.FC<IPlaylist> = ({ id, image = "", name, description, colo
         onMouseOut={() => setShowGreenButton(false)}
       >
         <img src={require(`../assets/imgs/${image}`)} alt="Playlist" width="150" />
-        <h3>{name.length > 20 ? name.substr(0, 17) + '...' : name}</h3>
+        <h3>{name && name.length > 20 ? name.substr(0, 17) + '...' : name}</h3>
         <p>{description.length > 47 ? description.substr(0, 39) + '...' : description}</p>
         <img
           onClick={() => setShowModal(true)}

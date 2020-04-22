@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import api from 'config/api';
-import { ICategory } from 'interfaces';
+import { IGenericItem } from 'interfaces';
 
 export const useCategories = () => {
-  const [categories, setCategories] = useState<ICategory[]>([]);
+  const [categories, setCategories] = useState<IGenericItem[]>([]);
 
   useEffect(() => {
     api

@@ -10,8 +10,6 @@ import Footer from 'components/Footer';
 import Menu from 'components/Menu';
 import MyHeader from 'components/Header';
 
-import styled from 'styled-components';
-
 const { Header, Sider, Content } = Layout;
 
 interface IStylesLayout {
@@ -19,6 +17,7 @@ interface IStylesLayout {
   sider: Object;
   header: Object;
   content: Object;
+  contentLayout: Object;
 }
 
 const styles: IStylesLayout = {
@@ -45,18 +44,20 @@ const styles: IStylesLayout = {
   content: {
     paddingTop: 60,
   },
+  contentLayout: {
+    backgroundColor: '#121212',
+  },
 };
 
 const Index: React.FC = () => {
-  let bgHeader = String(localStorage.getItem('backgroundHeader'));
-  const [backgroundColor, setBackgroundColor] = useState(bgHeader);
+  const [backgroundColor, setBackgroundColor] = useState(String(localStorage.getItem('backgroundHeader')));
   const [currentPage, setCurrentPage] = useState('');
   const [opacity, setOpacity] = useState(0.5);
 
   const changeBackgroundColorOnScroll = (e: any) => {
     const { scrollTop } = e.target;
-    let bgHeader = String(localStorage.getItem('backgroundHeader'));
-    let bgHeaderOnScroll = String(localStorage.getItem('backgroundHeaderOnScroll'));
+    const bgHeader = String(localStorage.getItem('backgroundHeader'));
+    const bgHeaderOnScroll = String(localStorage.getItem('backgroundHeaderOnScroll'));
     if (scrollTop > 145) {
       setBackgroundColor(bgHeaderOnScroll);
       setOpacity(1);
@@ -66,6 +67,10 @@ const Index: React.FC = () => {
     }
   };
 
+  const changeBackgroundHeader = (color: string) => {
+    setBackgroundColor(color);
+  };
+
   return (
     <Router>
       <Layout style={styles.mainLayout}>
@@ -73,46 +78,38 @@ const Index: React.FC = () => {
           <Sider style={styles.sider} width={230}>
             <Menu currentPage={currentPage} />
           </Sider>
-          <ContentLayout onScroll={changeBackgroundColorOnScroll}>
+          <Layout style={styles.contentLayout} onScroll={changeBackgroundColorOnScroll}>
             <Header style={styles.header}>
-              <div
-                style={{
-                  backgroundColor,
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  height: 60,
-                  zIndex: -2,
-                  width: '100%',
-                  transition: 'background-color 0.5s',
-                  opacity,
-                }}
-              />
-              <MyHeader currentPage={currentPage} />
+              <MyHeader currentPage={currentPage} backgroundColor={backgroundColor} opacity={opacity} />
             </Header>
             <Content style={styles.content}>
               <Switch>
                 <Route path="/" exact>
-                  <Dashboard handleCurrentPage={() => setCurrentPage('/')} />
+                  <Dashboard
+                    handleCurrentPage={() => setCurrentPage('/')}
+                    changeBackgroundHeader={(color: string) => changeBackgroundHeader(color)}
+                  />
                 </Route>
                 <Route path="/search">
-                  <Search handleCurrentPage={() => setCurrentPage('search')} />
+                  <Search
+                    handleCurrentPage={() => setCurrentPage('search')}
+                    changeBackgroundHeader={(color: string) => changeBackgroundHeader(color)}
+                  />
                 </Route>
                 <Route path="/genre/:id">
-                  <Genre handleCurrentPage={() => setCurrentPage('genre')} />
+                  <Genre
+                    handleCurrentPage={() => setCurrentPage('genre')}
+                    changeBackgroundHeader={(color: string) => changeBackgroundHeader(color)}
+                  />
                 </Route>
               </Switch>
             </Content>
-          </ContentLayout>
+          </Layout>
         </Layout>
         <Footer />
       </Layout>
     </Router>
   );
 };
-
-const ContentLayout = styled(Layout)`
-  background-color: #121212;
-`;
 
 export default Index;

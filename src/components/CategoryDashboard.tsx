@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Playlist from 'components/Playlist';
-import { IPlaylist, ICategory } from 'interfaces';
+import { IGenericItem } from 'interfaces';
 import usePlaylists from 'hooks/usePlaylists';
 
-const Category: React.FC<ICategory> = ({ id, title, description }: ICategory) => {
+const Category: React.FC<IGenericItem> = ({ id, title, description }: IGenericItem) => {
   const { playlists } = usePlaylists(id);
   return (
     <Container>
@@ -15,7 +15,7 @@ const Category: React.FC<ICategory> = ({ id, title, description }: ICategory) =>
       </div>
       {description != '' && <p>{description}</p>}
       <div>
-        {playlists?.map((playlist: IPlaylist) => (
+        {playlists?.map((playlist: IGenericItem) => (
           <Playlist
             key={playlist.id}
             id={playlist.id}

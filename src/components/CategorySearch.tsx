@@ -1,22 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { ICategory } from 'interfaces';
+import { IGenericItem } from 'interfaces';
 
-const CategorySearch: React.FC<ICategory> = ({
-  id,
+const CategorySearch: React.FC<IGenericItem> = ({
   title,
-  description,
   image = '',
   color = '',
-}: ICategory) => {
-  return (
-    <Container backgroundColor={color} image={image}>
-      <img src={`https://t.scdn.co/images/${image}`} alt={title} />
-      <p>{title}</p>
-    </Container>
-  );
-};
+}: IGenericItem) => (
+  <Container backgroundColor={color} image={image}>
+    <img src={`https://t.scdn.co/images/${image}`} alt={title} />
+    <p>{title}</p>
+  </Container>
+);
 
 interface IContainer {
   backgroundColor: string;
@@ -33,7 +29,7 @@ const Container = styled.div<IContainer>`
   margin-right: 18px;
   border-radius: 8px;
   background: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.4));
-  background-color: ${props => props.backgroundColor};
+  background-color: ${(props) => props.backgroundColor};
   img {
     transform: rotate(25deg) translate(18%, -2%);
     width: 100px;

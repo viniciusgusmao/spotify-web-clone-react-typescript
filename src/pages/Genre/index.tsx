@@ -4,18 +4,19 @@ import { Container } from 'components/Common';
 import { useParams } from 'react-router-dom';
 import api from 'config/api';
 import styled from 'styled-components';
-import { ICategory } from 'interfaces';
+import { IGenericItem } from 'interfaces';
 
 import { convertHexToRgb, convertHexToRgba } from 'utils';
 
 type Props = {
   handleCurrentPage: () => void;
+  changeBackgroundHeader: (color: string) => void
 };
 
-const Genre: React.FC<Props> = ({ handleCurrentPage }: Props) => {
+const Genre: React.FC<Props> = ({ handleCurrentPage, changeBackgroundHeader }: Props) => {
   const { id } = useParams();
   const [backgroundGradientPage, setBackgroundGradientPage] = useState('transparent');
-  const [category, setCategory] = useState<ICategory>();
+  const [category, setCategory] = useState<IGenericItem>();
 
   useEffect(() => {
     api
@@ -25,6 +26,7 @@ const Genre: React.FC<Props> = ({ handleCurrentPage }: Props) => {
         setBackgroundGradientPage(res.data.color);
         localStorage.setItem('backgroundHeaderOnScroll', res.data.color);
         handleCurrentPage();
+        changeBackgroundHeader(res.data.color);
       })
       .catch((error: any) => {
         console.log(error);

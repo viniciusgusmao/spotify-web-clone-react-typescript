@@ -7,39 +7,56 @@ import InputSearch from 'components/InputSearch';
 import { useHistory } from 'react-router-dom';
 
 const defaultProps = {
-  currentPage: '',
+  currentPage: '/',
 };
 
-type HeaderProps = {
+type Props = {
   currentPage: string;
+  backgroundColor: string;
+  opacity: number;
 } & typeof defaultProps;
 
-const Header: React.FC<HeaderProps> = ({ currentPage }) => {
+const Header: React.FC<Props> = ({ currentPage, backgroundColor, opacity }: Props) => {
   const history = useHistory();
   return (
-    <BoxHeaderPage>
-      <div>
-        <img src={ArrowBack} alt="Voltar" onClick={() => history.goBack()} />
-        <img src={ArrowForward} alt="Avançar" onClick={() => history.goForward()} />
-        {currentPage == 'search' && <InputSearch />}
-      </div>
-      <div>
-        <Button
-          color="#fff"
-          handleClick={() => {}}
-          backgroundColor="#0B0B0B"
-          title="Inscrever-se"
-          fontSize={10}
-        />
-        <Button
-          color="#000"
-          handleClick={() => {}}
-          backgroundColor="#fff"
-          title="Entrar"
-          fontSize={10}
-        />
-      </div>
-    </BoxHeaderPage>
+    <>
+      <div
+        style={{
+          backgroundColor,
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          height: 60,
+          zIndex: -2,
+          width: '100%',
+          transition: 'background-color 0.5s',
+          opacity,
+        }}
+      />
+      <BoxHeaderPage>
+        <div>
+          <img src={ArrowBack} alt="Voltar" onClick={() => history.goBack()} />
+          <img src={ArrowForward} alt="Avançar" onClick={() => history.goForward()} />
+          {currentPage == 'search' && <InputSearch />}
+        </div>
+        <div>
+          <Button
+            color="#fff"
+            handleClick={() => {}}
+            backgroundColor="#0B0B0B"
+            title="Inscrever-se"
+            fontSize={10}
+          />
+          <Button
+            color="#000"
+            handleClick={() => {}}
+            backgroundColor="#fff"
+            title="Entrar"
+            fontSize={10}
+          />
+        </div>
+      </BoxHeaderPage>
+    </>
   );
 };
 

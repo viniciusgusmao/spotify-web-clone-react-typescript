@@ -17,7 +17,7 @@ const AudioControl: React.FC = () => (
     </div>
     <div>
       <span>00:00</span>
-      <hr />
+      <div></div>
       <span>00:00</span>
     </div>
   </Container>
@@ -47,10 +47,12 @@ const Container = styled.div`
       color: #b3b3b3;
       font-size: 12px;
     }
-    hr {
+    div {
       width: 400px;
       margin: 0 10px;
-      background-color: #b3b3b3;
+      background-color: #535353;
+      height: 4px;
+      border-radius: 20px;
     }
   }
 `;

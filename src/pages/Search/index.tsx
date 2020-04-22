@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Category from 'components/CategorySearch';
 import { Container } from 'components/Common';
-import { ICategory } from 'interfaces';
+import { IGenericItem } from 'interfaces';
 import { Link } from 'react-router-dom';
 
 import { useCategories } from 'hooks/useCategories';
@@ -9,20 +9,22 @@ import styled from 'styled-components';
 
 type Props = {
   handleCurrentPage: () => void;
+  changeBackgroundHeader: (color: string) => void
 };
 
-const Search: React.FC<Props> = ({ handleCurrentPage }) => {
+const Search: React.FC<Props> = ({ handleCurrentPage, changeBackgroundHeader }: Props) => {
   const { categories } = useCategories();
   useEffect(() => {
     localStorage.setItem('backgroundHeader', '#080808');
     localStorage.setItem('backgroundHeaderOnScroll', '#080808');
     handleCurrentPage();
+    changeBackgroundHeader('#080808');
   }, []);
   return (
     <ContainerSearch>
       <h1>Navegar por todas as seções</h1>
       <div>
-        {categories?.map((category: ICategory) => (
+        {categories?.map((category: IGenericItem) => (
           <Link to={`genre/${category.id}`}>
             <Category
               key={category.id}
