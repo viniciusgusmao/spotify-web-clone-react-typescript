@@ -24,9 +24,11 @@ I had to mock the data of categories and playlists because performing the integr
 **1. npm install**
 
 **2.  Install json-server**
+
 npm install -g json-server
 
 **3. Start the fake API**
+
 json-server --watch database/db.json
 
 **4.  npm start**
