@@ -18,7 +18,27 @@ Spotify is the audio streaming service that I use most in my daily life, whether
 
 ## Screenshot
 
-![demo](https://i.ibb.co/s21X061/Spotify-In-cio-1.gif)
+<table>
+<tr>
+<td colspan="2">
+<img src="https://i.ibb.co/FWcs0tj/Captura-de-tela-de-2020-04-22-18-19-48.png" />
+</td>
+</tr>
+<tr>
+<td>
+  <img src="https://i.ibb.co/WtmHBfd/Captura-de-tela-de-2020-04-22-18-20-05.png" />
+  </td>
+<td>
+  <img src="https://i.ibb.co/k4dWftb/Captura-de-tela-de-2020-04-22-18-20-17.png" />
+  </td>
+</tr>
+<tr>
+<td>
+  <img src="https://i.ibb.co/y4xZn0Z/Captura-de-tela-de-2020-04-22-18-20-29.png" />
+  </td>
+<td><img src="https://i.ibb.co/w61xNrn/Captura-de-tela-de-2020-04-22-18-20-45.png" /></td>
+</tr>
+</table>
 
 ## Installation
 I had to mock the data of categories and playlists because performing the integration with the official Spotify API was not the goal of this project. So, I used the **json-server** package to do this job.
