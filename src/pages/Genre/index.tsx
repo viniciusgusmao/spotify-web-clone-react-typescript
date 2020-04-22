@@ -6,8 +6,6 @@ import api from 'config/api';
 import styled from 'styled-components';
 import { IGenericItem } from 'interfaces';
 
-import { convertHexToRgb, convertHexToRgba } from 'utils';
-
 type Props = {
   handleCurrentPage: () => void;
   changeBackgroundHeader: (color: string) => void
