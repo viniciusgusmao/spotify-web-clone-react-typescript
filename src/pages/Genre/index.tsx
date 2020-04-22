@@ -12,8 +12,8 @@ type Props = {
   handleCurrentPage: () => void;
 };
 
-const Genre: React.FC<Props> = ({ handleCurrentPage }) => {
-  let { id } = useParams();
+const Genre: React.FC<Props> = ({ handleCurrentPage }: Props) => {
+  const { id } = useParams();
   const [backgroundGradientPage, setBackgroundGradientPage] = useState('transparent');
   const [category, setCategory] = useState<ICategory>();
 
@@ -32,22 +32,19 @@ const Genre: React.FC<Props> = ({ handleCurrentPage }) => {
   }, [id]);
 
   return (
-    <>
-      <GradientBox backgroundColor={backgroundGradientPage} />
-      <Container>
-        {category && (
-          <>
-            <GenreTitle>{category.title}</GenreTitle>
-            <Category
-              key={category.id}
-              id={category.id}
-              title="Playlists populares"
-              description=""
-            />
-          </>
-        )}
-      </Container>
-    </>
+    <ContainerGradient backgroundColor={backgroundGradientPage}>
+      {category && (
+        <>
+          <GenreTitle>{category.title}</GenreTitle>
+          <Category
+            key={category.id}
+            id={category.id}
+            title="Playlists populares"
+            description=""
+          />
+        </>
+      )}
+    </ContainerGradient>
   );
 };
 
@@ -55,15 +52,12 @@ interface IGradientBox {
   backgroundColor: string;
 }
 
-const GradientBox = styled.div<IGradientBox>`
-  width: 81.2%;
-  height: 230px;
+const ContainerGradient = styled(Container)<IGradientBox>`
   background-image: linear-gradient(
-    to top,
-    ${props => convertHexToRgb(props.backgroundColor)},
-    ${props => convertHexToRgba(props.backgroundColor)}
+    to bottom,
+    ${(props) => props.backgroundColor},
+    #121212 42%
   );
-  position: absolute;
 `;
 
 const GenreTitle = styled.h1`
