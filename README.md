@@ -16,7 +16,7 @@ Spotify is the audio streaming service that I use most in my daily life, whether
 - Eslint
 - Prettier
 
-## Screenshot
+## Screenshots
 
 <table>
 <tr>
