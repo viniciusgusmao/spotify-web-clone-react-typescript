@@ -60,6 +60,6 @@ Access in http://localhost:3000/
 ## Roadmap
 
 I tried to make only the functionalities of the area that does not have authentication. Here are some features that still need to be done:
-- Details page on click in some playlist
+- Details playlist page
 - Effects on the footer audio buttons
 - Do input search works
